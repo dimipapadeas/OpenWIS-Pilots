@@ -39,5 +39,5 @@ Agility, Scalability, DevOps Cycle..
 ## General SOA principles
 # Illustrate possbile SOA implementations
 
-##Discuss SOA best practices
-###why OSGi? `consider move it to OWT-2`
+## Discuss SOA best practices
+### why OSGi? `consider move it to OWT-2`
