@@ -21,6 +21,8 @@ This tutorial intends to:
 2. Illustrate possbile SOA implementations.
 3. Discuss SOA best practices.
 ```
+---
+
 # OWT1 - Service Oriented Architecture (SOA)
 
 
@@ -59,6 +61,7 @@ Fault Tolerance
 When a specific service is under heavy pressure it brings the whole application down with it.
 For instance in cases when Database connection pool is getting exhausted the entire application bogging down.
 
+---
 
 
 ## Service-oriented architecture (SOA) Definition
@@ -82,6 +85,7 @@ A manifesto was published for service-oriented architecture in October, 2009. Th
  ## Why SOA ?
 The solution to [Monolithic services problem](path), is not to rip and replace systems or applications, nor to completely renovate them, but rather to find a way to leverage existing software investments so that overall organizational goals are effectively supported. That soloution is to eliminate dependencies and enable quick testing and deployment of code changes, greater modularity, loose coupling and all hold promise in simplifying the integration task. In other words Service Oriented Architecture (SOA). Service orientation helps to accomplish these goals by making systems more responsive to business needs, simpler to develop and easier to maintain and manage. Implementing a solution architecture based upon service orientation helps organizations plan ahead for change, rather than responding reactively.
 
+---
 
 ## General SOA principles
 
