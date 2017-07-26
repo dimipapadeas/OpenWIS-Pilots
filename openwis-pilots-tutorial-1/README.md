@@ -2,7 +2,7 @@
 
 <!-- todo -->
 Abstract 
-```
+
 Service-oriented architecture (SOA) is an approach used to create an architecture based upon the use of services. Services carry out some small function, such as producing data, validating a customer, or providing simple analytics. The basic principles of service-oriented architecture are independent of vendors, products and technologies. A service is a discrete unit of functionality that can be accessed remotely and acted upon and updated independently.
 
 According to SOA, a service has the following properties:
@@ -20,7 +20,8 @@ This tutorial intends to:
 1. Examine the general SOA principles.
 2. Illustrate possbile SOA implementations.
 3. Discuss SOA best practices.
-```
+
+
 ---
 
 # OWT1 - Service Oriented Architecture (SOA)
@@ -33,7 +34,7 @@ This tutorial intends to:
 In software engineering, a monolithic application has been used to describe a single-tiered application in which
 all MVC components are combined into a single program within a single platform. A monolithic application is self-contained, and independent from other applications. Consider a monolithic application as a big container where in all components of the application are assembled together and tightly packaged in various formats such as EAR, WAR, JAR etc. Which is finally deployed as a single unit on the application server.
 
-
+---
 ### The problem 
 Monolithic services tend to get tightly coupled and entangled as the application evolves, making it difficult to isolate services for purposes such as independency scaling or mainainance. Monolithic architectures are also much harder to understand, because there may be dependencies, side-effects etc which are not obvious when you’re looking at a particular service or controller.
 
@@ -66,9 +67,11 @@ For instance in cases when Database connection pool is getting exhausted the ent
 
 ## Service-oriented architecture (SOA) Definition
 
-```
+
 Service-oriented architecture (SOA) is an approach used to create an architecture based upon the use of services. Services carry out some small function, such as producing data, validating a customer, or providing simple analytics. The basic principles of service-oriented architecture are independent of vendors, products and technologies. A service is a discrete unit of functionality that can be accessed remotely and acted upon and updated independently.
-```
+
+
+---
 
 ## Defining concepts
 A manifesto was published for service-oriented architecture in October, 2009. This came up with six core values which are listed as follows:[SOA Manifesto](www.soa-manifesto.org)
@@ -147,6 +150,7 @@ Many services which were not initially planned under SOA, may get encapsulated o
 Since the definition of SOA does not enforce any technological standards, its implementation can take many forms, such as the following:
 
 
+---
 
 
 ## Illustrate possbile SOA appliances
