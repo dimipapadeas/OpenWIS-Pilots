@@ -38,6 +38,9 @@ all MVC components are combined into a single program within a single platform. 
 ### The problem 
 Monolithic services tend to get tightly coupled and entangled as the application evolves, making it difficult to isolate services for purposes such as independency scaling or mainainance. Monolithic architectures are also much harder to understand, because there may be dependencies, side-effects etc which are not obvious when you’re looking at a particular service or controller.
 
+
+
+
 Aspects where monolithic architectures are not doing well:
 
 
@@ -70,8 +73,13 @@ For instance in cases when Database connection pool is getting exhausted the ent
 
 Service-oriented architecture (SOA) is an approach used to create an architecture based upon the use of services. Services carry out some small function, such as producing data, validating a customer, or providing simple analytics. The basic principles of service-oriented architecture are independent of vendors, products and technologies. A service is a discrete unit of functionality that can be accessed remotely and acted upon and updated independently.
 
+^
 
----
+
+
+
+
+
 
 ## Defining concepts
 A manifesto was published for service-oriented architecture in October, 2009. This came up with six core values which are listed as follows:[SOA Manifesto](www.soa-manifesto.org)
