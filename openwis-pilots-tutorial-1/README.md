@@ -132,7 +132,7 @@ Since the definition of SOA does not enforce any technological standards, its im
 
 
 ## Illustrate possible Approaches to SOA
-`stil under construction`
+
 A SOA solution often relies on many integration components, such as
 
 ### 1. The Enterprise Service Bus (ESB)
