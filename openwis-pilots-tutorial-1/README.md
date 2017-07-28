@@ -1,6 +1,49 @@
 # OWT1 - Service Oriented Architecture (SOA)
 
 
+## Table of Contents  
+
+
+ Chapter | node
+------ | -----
+[Service Oriented Architecture (SOA) Definition](#service-oriented-architecture-soa-definition)|   
+[General SOA Principles](#general-soa-principles)|
+[SOA Benefits](#soa-benefits)|
+||[1. Loose Coupling](#1-loose-coupling)
+||[2. Location Transparency](#2-location-transparency)
+||[3. Higher Reusability](#3-higher-reusability)
+||[4. Parallel Development](#4-parallel-development)
+||[5. Improved Testability](#5-improved-testability)
+||[6. Higher Scalability & Availability](#6-higher-scalability--availability)
+[SOA Technological Approaches](#soa-technological-approaches)|
+||[1. The Enterprise Service Bus (ESB)]( #1-the-enterprise-service-bus-esb)
+||[2. Business Process Management](#2-business-process-management)
+||[3. OSGi framework](#3-osgi-framework)
+|| [4. Microservices - a specialization of SOA](#4-microservices---a-specialization-of-soa)
+||[5. Web APIs: REST/SOAP](#5-web-apis-restsoap)
+[SOA Design Patterns](#soa-design-patterns)|
+||[1. Agnostic Services](#1-agnostic-services)
+||[2. Atomic Service Transaction](#2-atomic-service-transaction)
+||[3. Service Façade](#3-service-façade)
+||[4. Service Callback](#4-service-callback)
+||[5. Multiple Service Contracts](#5-multiple-service-contracts)
+||[6. Authentication Broker](#6-authentication-broker)
+||[7. Message Origin Authentication](#7-message-origin-authentication)
+[SOA Best Practices #soa-best-practices](#soa-best-practices)|
+||[1. Automated Service Integration Test Suites](#1-automated-service-integration-test-suites)
+||[2. Service Testing Framework](#2-service-testing-framework)
+||[3. Managing Security Setup And Validation](#3-managing-security-setup-and-validation)
+||[4. Configurable Logging](#4-configurable-logging)
+||[5. Test Driven Development (TDD)](#5-test-driven-development-tdd)
+||[6. Standards Adherence](#6-standards-adherence)
+||[7. Interoperability](#7-interoperability)
+||[8. New Technology Adoption](#8-new-technology-adoption)
+
+
+
+
+
+
 ## Service Oriented Architecture (SOA) Definition
 The following is one of the many definitions of _Service Oriented Architecture_:
 
@@ -76,9 +119,6 @@ The fact that SOA consists of independent and reusable services, means that thes
 ### 6. Higher Scalability & Availability
 The isolated nature of services allows easier scaling with less cost than that of a monolithic system. In a typical scenario, if a specific service is very heavy in terms of performance/resources, it can be scaled individually and improve performance, without having to scale the whole application. This - of course - also affects high availability in a similar manner.
 
-
-
-Since the definition of SOA does not enforce any technological standards, its implementation can take many forms, such as the following:
 
 ## SOA Technological Approaches
 
