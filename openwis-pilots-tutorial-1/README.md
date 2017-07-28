@@ -7,7 +7,10 @@
 ## Service-oriented architecture (SOA) Definition
 
 ```
-Service-oriented architecture (SOA) is an approach used to create an architecture based upon the use of services. Services carry out some small function, such as producing data, validating a customer, or providing simple analytics. The basic principles of service-oriented architecture are independent of vendors, products and technologies. A service is a discrete unit of functionality that can be accessed remotely and acted upon and updated independently.
+Service-oriented architecture (SOA) is an approach used to create an architecture based upon the use of services.
+Services carry out some small function, such as producing data, validating a customer, or providing simple analytics.
+The basic principles of service-oriented architecture are independent of vendors, products and technologies.
+A service is a discrete unit of functionality that can be accessed remotely and acted upon and updated independently.
 ```
 
 
@@ -15,7 +18,8 @@ Service-oriented architecture (SOA) is an approach used to create an architectur
 ### Service
 Service is the essential concept of SOA.
 
-`A system supplying a public need such as transport, communications, or utilities such as electricity and water`
+
+`Service is a system supplying a public need such as transport, communications, or utilities such as electricity and water`
 
 Service as team is not originally a technical concept. The idea of service has been used in many fields long time ago.
 Where a person or a company as the *service provider*, is offering to do something – carry goods and messages, look after vehicles, install and repair building roofs – that will benefit other people or companies, as the *service consumers*. The providers offer to contract with the consumers to do these things, in order that the consumers know in advance what they purchase. The idea has been adopted by technologists. They have established the concept of a software service.
@@ -98,8 +102,6 @@ The other aspect of SOA testing is that testing of independent reusable service 
 
 
 
-
-
 ## General SOA principles
 
 According to SOA, a service must have the following Principles:
@@ -133,7 +135,13 @@ A SOA solution often relies on many integration components, such as
 ### ESBs
 
 ```
-An enterprise service bus (ESB) implements a communication system between mutually interacting software applications in a service-oriented architecture (SOA). It implements a software architecture as depicted on the right. As it implements a software architecture for distributed computing, it therefore also implements a special variant of the more general client-server model, wherein, in general, any application using ESB can behave as server or client in turns. ESB promotes agility and flexibility with regard to high-level protocol communication between applications. The primary goal of the high-level protocol communication is enterprise application integration (EAI) of heterogeneous and complex service or application landscapes (a view from the network level).
+An enterprise service bus (ESB) implements a communication system between mutually interacting software applications in 
+a service-oriented architecture (SOA). It implements a software architecture as depicted on the right. As it implements
+a software architecture for distributed computing, it therefore also implements a special variant of the more general 
+client-server model, wherein, in general, any application using ESB can behave as server or client in turns. ESB promotes
+agility and flexibility with regard to high-level protocol communication between applications. The primary goal of the
+high-level protocol communication is enterprise application integration (EAI) of heterogeneous and complex service 
+or application landscapes (a view from the network level).
 ```
 
 
@@ -150,7 +158,9 @@ Many companies, for many years now, have tried to solve business process problem
 ### 3. OSGi framework
 
 ```
-OSGi (Open Service Gateway Initiative) is a Java framework for developing and deploying modular software programs and libraries. Each bundle is a tightly coupled, dynamically loadable collection of classes, jars, and configuration files that explicitly declare their external dependencies.
+OSGi (Open Service Gateway Initiative) is a Java framework for developing and deploying modular software programs and libraries.
+Each bundle is a tightly coupled, dynamically loadable collection of classes, jars, and configuration files that explicitly
+declare their external dependencies.
 ```
 
 ### 4. Web API: REST - SOAP (protocol)
