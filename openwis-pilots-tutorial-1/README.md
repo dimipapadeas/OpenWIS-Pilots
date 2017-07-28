@@ -31,6 +31,29 @@ When this concept was applied to software, the _Software Service_ was born:
 
 > A mechanism to enable access to one or more capabilities, where the access is provided using a prescribed interface and is exercised consistent with constraints and policies as specified by the service description." [OASIS Reference Model for Service Oriented Architecture 1.0](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=soa-rm)
 
+
+
+## General SOA principles
+
+There are no industry standards relating to the exact composition of a service-oriented architecture, although many industry sources have published their own principles. Some of these include the following:
+
+Principle | Description
+----|---------------
+Standardized service contract |Services adhere to a standard communications agreements, as defined collectively by one or more service-description documents within a given set of services.
+Service reference autonomy (an aspect of loose coupling)|The relationship between services is minimized to the level that they are only aware of their existence.
+Service location transparency (an aspect of loose coupling)|Services can be called from anywhere within the network that it is located no matter where it is present.
+Service longevity|Services should be designed to be long lived. Where possible services should avoid forcing consumers to change if they do not require new features, if you call a service today you should be able to call the same service tomorrow.
+Service abstraction|The services act as black boxes, that is their inner logic is hidden from the consumers.
+Service autonomy|Services are independent and control the functionality they encapsulate, from a Design-time and a run-time perspective.
+Service statelessness|Services are stateless, that is either return the requested value or give an exception hence minimizing resource use.
+Service granularity|A principle to ensure services have an adequate size and scope. The functionality provided by the service to the user must be relevant.
+Service normalization|Services are decomposed or consolidated (normalized) to minimize redundancy. In some, this may not be done, These are the cases where performance optimization, access, and aggregation are required.[15]
+Service composability|Services can be used to compose other services.
+Service discovery|Services are supplemented with communicative meta data by which they can be effectively discovered and interpreted.
+Service reusability|Logic is divided into various services, to promote reuse of code.
+Service encapsulation|Many services which were not initially planned under SOA, may get encapsulated or become a part of SOA.
+
+
 ## SOA Benefits
 
 The use of SOA provides major benefits:
@@ -57,26 +80,6 @@ The isolated nature of services allows easier scaling with less cost than that o
 
 
 
-
-## General SOA principles
-
-There are no industry standards relating to the exact composition of a service-oriented architecture, although many industry sources have published their own principles. Some of these include the following:
-
-Principle | Description
-----|---------------
-Standardized service contract |Services adhere to a standard communications agreements, as defined collectively by one or more service-description documents within a given set of services.
-Service reference autonomy (an aspect of loose coupling)|The relationship between services is minimized to the level that they are only aware of their existence.
-Service location transparency (an aspect of loose coupling)|Services can be called from anywhere within the network that it is located no matter where it is present.
-Service longevity|Services should be designed to be long lived. Where possible services should avoid forcing consumers to change if they do not require new features, if you call a service today you should be able to call the same service tomorrow.
-Service abstraction|The services act as black boxes, that is their inner logic is hidden from the consumers.
-Service autonomy|Services are independent and control the functionality they encapsulate, from a Design-time and a run-time perspective.
-Service statelessness|Services are stateless, that is either return the requested value or give an exception hence minimizing resource use.
-Service granularity|A principle to ensure services have an adequate size and scope. The functionality provided by the service to the user must be relevant.
-Service normalization|Services are decomposed or consolidated (normalized) to minimize redundancy. In some, this may not be done, These are the cases where performance optimization, access, and aggregation are required.[15]
-Service composability|Services can be used to compose other services.
-Service discovery|Services are supplemented with communicative meta data by which they can be effectively discovered and interpreted.
-Service reusability|Logic is divided into various services, to promote reuse of code.
-Service encapsulation|Many services which were not initially planned under SOA, may get encapsulated or become a part of SOA.
 
 
 Since the definition of SOA does not enforce any technological standards, its implementation can take many forms, such as the following:
