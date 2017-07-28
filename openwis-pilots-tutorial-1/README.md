@@ -135,28 +135,21 @@ Since the definition of SOA does not enforce any technological standards, its im
 `stil under construction`
 A SOA solution often relies on many integration components, such as
 
-
-### ESBs
-
-```
-An enterprise service bus (ESB) implements a communication system between mutually interacting software applications in 
-a service-oriented architecture (SOA). It implements a software architecture as depicted on the right. As it implements
-a software architecture for distributed computing, it therefore also implements a special variant of the more general 
-client-server model, wherein, in general, any application using ESB can behave as server or client in turns. ESB promotes
-agility and flexibility with regard to high-level protocol communication between applications. The primary goal of the
-high-level protocol communication is enterprise application integration (EAI) of heterogeneous and complex service 
-or application landscapes (a view from the network level).
-```
-
-
 ### 1. The Enterprise Service Bus (ESB)
 
-The first approach that helps to build and implement an optimal SOA is the enterprise service bus or ESB. This approach helps to coordinate and arrange the different elements that are in the form of distributed services on a network. This approach considers the systems to be discrete and distributed services that connect to one another through message oriented infrastructure that is asynchronous. This kind of a message-oriented infrastructure makes it possible to have loosely coupled connections between independent services or modules.
+The first approach that allows to build and implement an optimal SOA is the enterprise service bus or ESB.
+This approach helps to coordinate and arrange the different elements that are in the form of distributed services on a network.
+ESB promotes agility and flexibility with regard to high-level protocol communication between applications.
+Also considers the systems as discrete and distributed services that connect to one another through message oriented infrastructure that is asynchronous.This kind of a message-oriented infrastructure makes it possible to have loosely coupled connections between independent services or modules.Networkwise, the primary goal of the high-level protocol communication is enterprise application integration (EAI) of heterogeneous and complex services.
+[ESB image]
 
 
 ### 2. Business Process Management
 
-Many companies, for many years now, have tried to solve business process problems by the implementation of Business Process Management approach. This approach takes into consideration the IT assets and systems as activities or tasks that participate in well synchronized and well-orchestrated business procedures.   BPM tools are mainly used at the time of modeling and designing procedures rather than using them to construct processes that can reach integration objectives. This is the main challenge of BPM. By BPM solutions on their own are enough to meet SOA requirements because they do not consist of the runtime environment that is needed for loosely coupled modules.
+Many companies have tried to solve business process problems by the implementation of Business Process Management approach. This approach takes into consideration the IT assets and systems as activities or tasks that participate in well synchronized and well-orchestrated business procedures.BPM tools are mostly used at the time of modeling and designing procedures rather than using them to construct processes that can reach integration objectives. This is the main challenge of BPM. By BPM solutions on their own are enough to meet SOA requirements because they do not consist of the runtime environment that is needed for loosely coupled modules.
+
+In BPM frameworks, solutions are nearly always based on a workflow or set of workflows. The concept is that work in a real-time business environment should not be static, rather it should progress through a series of steps (‘a process’) in time. Basing a solution on sequential activities is effective in encouraging teams to reach completion of goals within a set period. The process platform encourages progression through tasks by sending the participants reminders and indications of their completion status and due date. Because of this, teams who use these solutions tend to perform faster and accomplish goals more consistently.
+
 
 
 ### 3. OSGi framework
@@ -168,12 +161,8 @@ and configuration files that explicitly declare their external dependencies.
 ```
 
 ### 4. Web API: REST - SOAP (protocol)
-Simple Object Access Protocol (SOAP) and Representational State Transfer (REST)
 
-A Web API is a development in web services where emphasis has been moving to simpler representational state transfer (REST) based communications.[4] Restful APIs do not require XML-based web service protocols (SOAP and WSDL) to support their interfaces
-
-
-
+A Web API is a development in web services which implemented as Simple Object Access Protocol (SOAP) either as representational state transfer (REST) based communications. Web services make functional building-blocks accessible over standard Internet protocols independent of platforms and programming languages. All web-applications with decoupled functionality from the presentation of the application and moved to a web-services layer (API) are consist an implementation of an SOA methodology. 
 
 
 Discuss SOA best practices.
