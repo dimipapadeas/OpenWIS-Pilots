@@ -25,7 +25,7 @@ When this concept was applied to software, the _Software Service_ was born:
 
 > In the context of software architecture, service-orientation and service-oriented architecture, the term service refers to a software functionality or a set of software functionalities (such as the retrieval of specified information or the execution of a set of operations) with a purpose that can be reused by different clients for different purposes, together with the policies that should control its usage (based on the identity of the client requesting the service, for example).
 
-[OASIS](https://www.oasis-open.org/) defines the _Service_ as: 
+[OASIS](https://www.oasis-open.org/) defines the _Service_ as:
 
 > A mechanism to enable access to one or more capabilities, where the access is provided using a prescribed interface and is exercised consistent with constraints and policies as specified by the service description." [OASIS Reference Model for Service Oriented Architecture 1.0](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=soa-rm)
 
@@ -88,6 +88,7 @@ A SOA solution does not assume a pre-defined technical stack for implementation.
 ### 1. The Enterprise Service Bus (ESB)
 An enterprise service bus (ESB) implements a communication system between mutually interacting software applications in a service-oriented architecture (SOA). As it implements a software architecture for distributed computing, it therefore also implements a special variant of the more general client-server model, wherein, in general, any application using ESB can behave as server or client in turns. ESB promotes agility and flexibility with regard to high-level protocol communication between applications. The primary goal of the high-level protocol communication is enterprise application integration (EAI) of heterogeneous and complex service or application landscapes.
 
+![](wiki_img/esb.gif)
 
 There are a number of different ESB products available on the market today. Some products with wide usage are the following:
 - IBM Integration Bus
@@ -104,7 +105,7 @@ Features| Description
 ---|------
 Location Transparency | A way of centrally configuring endpoints for messages, so that a consumer application does not require information about a message producer in order to receive messages
 Transformation| The ability of the ESB to convert messages into a format that is usable by the consumer application.
-Protocol Conversion| Similar to the transformation requirement, the ESB must be able to accept messages sent in all major protocols, and convert them to the format required by the end consumer. 
+Protocol Conversion| Similar to the transformation requirement, the ESB must be able to accept messages sent in all major protocols, and convert them to the format required by the end consumer.
 Routing|The ability to determine the appropriate end consumer or consumers based on both pre-configured rules and dynamically created requests.
 Enhancement| The ability to retrieve missing data in incoming messages, based on the existing message data, and append it to the message before delivery to its final destination.
 Monitoring / Administration|The goal of ESB is to make integration a simple task.  As such, an ESB must provide an easy method of monitoring the performance of the system, the flow of messages through the ESB architecture, and a simple means of managing the system in order to deliver its proposed value to an infrastructure.
@@ -116,6 +117,8 @@ Security| ESB security involves two main components - making sure the ESB itself
 Business Process Management (BPM) is a natural complement to Service-Oriented Architecture (SOA), and a mechanism through which an organization can apply SOA to high-value business challenges. Both SOA and BPM can be pursued individually, but the two approaches in concert offer reciprocal benefits. This article will address the benefits of implementing BPM on top of a SOA foundation. Those benefits include a more agile, flexible, enterprise, one that can more easily proliferate across divisions and geographies, and is more resilient to changes in underlying IT systems. In addition to discussing how the complementary disciplines of BPM and SOA inherently promote radical cooperation between business and technology groups within an organization, this article will discuss how to enrich the services delivered from within a SOA.
 
 In BPM frameworks, solutions are nearly always based on a workflow or sets of workflows. The concept is that work in a real-time business environment should not be static, rather it should progress through a series of steps (‘a process’) in time. Basing a solution on sequential activities is effective in encouraging teams to reach completion of goals within a set period. The process platform encourages progression through tasks by sending the participants reminders and indications of their completion status and due date. Because of this, teams who use these solutions tend to perform faster and accomplish goals more consistently.
+
+![](wiki_img/bpm.jpg)
 
 
 Among others, BPM provides the following benefits when applied as a SOA solution:
@@ -139,6 +142,7 @@ Technology Integration |BPMS bridges the communication gap between business user
 
 > _OSGi (Open Service Gateway Initiative)_ is a Java framework for developing and deploying modular software programs and libraries. Each bundle is a tightly coupled, dynamically loadable collection of classes, jars, and configuration files that explicitly declare their external dependencies.
 
+![](wiki_img/Osgi_layer.png)
 
 Features| Description
 ----|------
@@ -155,13 +159,13 @@ Most Java applications are manageable enough in isolation. The real issues start
 - Class/Versioning conflicts: Evolving software pieces are another predicament under these scenarios. With everything loaded under the same umbrella -- JVM and classpath -- the greater the number of applications deployed in a single server instance, the greater the possibility applications might use different staple libraries -- JAR files -- making for a sure recipe to class loading and versioning conflicts.
 - Duplicate or unnecessary parts: All application owners take care of providing the necessary dependencies for proper execution, however, once applications are deployed in production environments, it can become quite difficult to determine if certain dependencies aren't already being met by some other application or if an application is actually using 100% of the dependencies intended by its creators.
 
-OSGi has teh solution to the problems listed above by providing a consise and streamlined deployment strategy that allows for effortless scaling, as well as virtually zero downtime.
+OSGi has the solution to the problems listed above by providing a consise and streamlined deployment strategy that allows for effortless scaling, as well as virtually zero downtime.
 
 
  ### 4. Microservices - a specialization of SOA
 >_Microservices_ is a variant of the service-oriented architecture (SOA) architectural style that structures an application as a collection of loosely coupled services. In a microservices architecture, services should be fine-grained and the protocols should be lightweight. The benefit of decomposing an application into different smaller services is that it improves modularity and makes the application easier to understand, develop and test. It also parallelizes development by enabling small autonomous teams to develop, deploy and scale their respective services independently. It also allows the architecture of an individual service to emerge through continuous refactoring. Microservices-based architectures enable continuous delivery and deployment.
 
-Microservices Architecture Benefits: 
+Microservices Architecture Benefits:
 - Software built as microservices can be broken down into multiple component services, so that each of these services can be deployed and then redeployed independently without compromising the integrity of an application. That means that microservice architecture gives developers the freedom to independently develop and deploy services.
 - Better fault isolation; if one microservice fails, the others will continue to work.
 - Code for different services can be written in different languages.
@@ -193,29 +197,29 @@ Even though built on simple foundations, Web APIs provide the following benefits
 As is the case with every theory, the practical implementations may vary singnificantly and may have diverging degrees of success. In general, even though there is no golden-bullet solution to fit every imaginable scenario, there are some general design patterns that ensure a certain degree of performance, robustness, and security.
 
 ### 1. Agnostic Services
-Agnostic services implement logic that is common to multiple business problems. Separating agnostic logic into discrete services facilitates service reuse and composability. Furthermore, agnostic services could explicitly declare that they are agnostic. This makes it clear to future designers and builders that they are designed to be reused. 
+Agnostic services implement logic that is common to multiple business problems. Separating agnostic logic into discrete services facilitates service reuse and composability. Furthermore, agnostic services could explicitly declare that they are agnostic. This makes it clear to future designers and builders that they are designed to be reused.
 
 ### 2. Atomic Service Transaction
-Services can be wrapped in atomic transactions with a rollback feature that reverses all actions and changes. Transaction management services can be implemented in the component layer and reused by multiple services. 
+Services can be wrapped in atomic transactions with a rollback feature that reverses all actions and changes. Transaction management services can be implemented in the component layer and reused by multiple services.
 
 ### 3. Service Façade
-A service façade sits between a service and a contract. It eliminates the tight coupling between the service and its contract. This is intended to minimize changes to the service if the contract changes. A service can have multiple service façades to support multiple contracts. 
+A service façade sits between a service and a contract. It eliminates the tight coupling between the service and its contract. This is intended to minimize changes to the service if the contract changes. A service can have multiple service façades to support multiple contracts.
 
 ### 4. Service Callback
-A service requires its consumers to call it asynchronously. If the consumer needs a response it provides a callback address. When the service reaches some milestone in processing it messages the consumer with a response. This approach frees resources and is useful when services are expected to be long running. 
+A service requires its consumers to call it asynchronously. If the consumer needs a response it provides a callback address. When the service reaches some milestone in processing it messages the consumer with a response. This approach frees resources and is useful when services are expected to be long running.
 
 ### 5. Multiple Service Contracts
-A service may support multiple contracts concurrently. This can be done to support backward compatibility (so that when a service changes all the consumers do not have to be updated). It is also done to provide different views to the service for different purposes (thus facilitating reuse). 
+A service may support multiple contracts concurrently. This can be done to support backward compatibility (so that when a service changes all the consumers do not have to be updated). It is also done to provide different views to the service for different purposes (thus facilitating reuse).
 
 ### 6. Authentication Broker
-An authentication broker assumes responsibility for authenticating consumers. Consumers are issued a token they can use to access services. 
+An authentication broker assumes responsibility for authenticating consumers. Consumers are issued a token they can use to access services.
 
 ### 7. Message Origin Authentication
 Digital certificates are used to authenticate clients. This results in preventing resource waste that could occur due to processing request of untrusted parties.
 
 
 ## SOA Best Practices
-Apart from the designed patterns described in the previsous section, certain best practices can be adopted that will greatly enhance the SOA implementation.
+Apart from the designed patterns described in the previous section, certain best practices can be adopted that will greatly enhance the SOA implementation.
 
 ### 1. Automated Service Integration Test Suites
 To manage service quality, it is recommended that an automated suite of tests be maintained along with the service. The suite needs to be executable as needed, with little or no setup time required. It should be able to properly test the main components within each layer of the service stack.
@@ -226,7 +230,7 @@ A related governance practice is to only certify a service for use once it has b
 To automate and maintain service Integration Test Suites, there are some common capabilities that must be developed and reused. These include:
 - The ability to produce test harnesses in the absence of an application UI
 - Generation of test messages, based on the service description (WSDL)
-- Variation of inputs, using a data table 
+- Variation of inputs, using a data table
 - Data set-up and tear-down scripts
 - Output of test reports
 - Definition of expected results
@@ -264,3 +268,4 @@ In order to ensure that the maximum number of consumers can access the SOA servi
 In addition to the fairly robust core standards forming the basis of Web Services and SOA, there is also a family of rapidly developing new applications from a variety of vendors, ranging from well established corporations to "fly by night" outfits. While it is important to keep abreast of new technology and build on it where feasible, one needs to be slightly wary of new technology until it has passed rigorous testing under the scenario that it will ultimately be used in. Therefore, newer technology should typically be incorporated in the comparatively low risk areas of the architecture.
 
 Furthermore, since SOA services are meant to be consumed, it is often the case that the end-user will be exposed to some elements of the SOA technical stack. If those elements are alien to the end-user, the chances of service adoption will drop significantly.
+
