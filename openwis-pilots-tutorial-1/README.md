@@ -99,15 +99,6 @@ Also considers the systems as discrete and distributed services that connect to 
 
 [ESB image]
 
-delete this:
-~An enterprise service bus (ESB) implements a communication system between mutually interacting software applications in 
-a service-oriented architecture (SOA). It implements a software architecture as depicted on the right. As it implements
-a software architecture for distributed computing, it therefore also implements a special variant of the more general 
-client-server model, wherein, in general, any application using ESB can behave as server or client in turns. ESB promotes
-agility and flexibility with regard to high-level protocol communication between applications. The primary goal of the
-high-level protocol communication is enterprise application integration (EAI) of heterogeneous and complex service 
-or application landscapes (a view from the network level).~
-
 
 
 ### 2. Business Process Management
