@@ -8,9 +8,10 @@
 
 ```
 Service-oriented architecture (SOA) is an approach used to create an architecture based upon the use of services.
-Services carry out some small function, such as producing data, validating a customer, or providing simple analytics.
-The basic principles of service-oriented architecture are independent of vendors, products and technologies.
-A service is a discrete unit of functionality that can be accessed remotely and acted upon and updated independently.
+Services carry out some small function, such as producing data, validating a customer, or providing simple
+analytics. The basic principles of service-oriented architecture are independent of vendors, products 
+and technologies. A service is a discrete unit of functionality that can be accessed remotely and acted 
+upon and updated independently.
 ```
 
 
@@ -158,9 +159,9 @@ Many companies, for many years now, have tried to solve business process problem
 ### 3. OSGi framework
 
 ```
-OSGi (Open Service Gateway Initiative) is a Java framework for developing and deploying modular software programs and libraries.
-Each bundle is a tightly coupled, dynamically loadable collection of classes, jars, and configuration files that explicitly
-declare their external dependencies.
+OSGi (Open Service Gateway Initiative) is a Java framework for developing and deploying modular software
+programs and libraries. Each bundle is a tightly coupled, dynamically loadable collection of classes, jars, 
+and configuration files that explicitly declare their external dependencies.
 ```
 
 ### 4. Web API: REST - SOAP (protocol)
