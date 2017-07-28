@@ -159,7 +159,44 @@ programs and libraries. Each bundle is a tightly coupled, dynamically loadable c
 and configuration files that explicitly declare their external dependencies.
 
 
-### 4. Web API: REST - SOAP (protocol)
+Features| Description
+---|------
+The environment and framework|OSGi is often categorized as a Java framework, however, don't let this often overused word in the Java world make you pigeonhole OSGi along side the now hundreds of frameworks available to ease everything from Java web development to Java testing, OSGi crosses this boundary, effectively providing an ad-hoc environment that facilitates modularizing an application into smaller and more manageable pieces.
+The JVM companion|Since OSGi's roots are in the embedded market, it should come as no surprise that OSGi's primary focus is on boosting the capabilities of the lowest common denominator in Java: The Java Virtual Machine. While the JVM has more than a decade of engineering behind it, for certain tasks -- such as system services and dynamic loading -- it has fallen shy of the expected curve in some vertical industries, giving way to initiatives like OSGi to fill in feature gaps.
+The Java packaging bundle|Of course no environment or framework is exempt from having its own packaging model, so just as you may have become accustomed to dealing with WAR(Web Archives) and EAR(Enterprise Archives while working with Java EE applications, or the more general purpose JAR(Java Archives) on your Java projects, so to OSGi has its own packaging model which goes by the name of a "bundle". For now, don't worry to much about what makes up a bundle -- we will get to that in a little while -- just be aware that the term "bundle" practically goes hand in hand with OSGi.
+
+
+A quick glance at the infrastructure used in the enterprise for enabling a SOA, will reveal a mix of Java EE containers, lightweight frameworks and other such middle-ware for this purpose, while there is nothing wrong with this infrastructure per-se, the way in which such software is deployed makes for a monolithic -- all or nothing -- approach which goes in part against the SOA tenets of nimbleness and re-usability.
+
+Most Java applications are manageable enough in isolation, the real issues start to arise once these seemingly simple pieces are placed in production environments alongside other Java parts, or if you will, the service orientated cloud for the enterprise. The way in which enterprise Java middle-ware and the JVM work in these scenarios, is the all or nothing concept, giving way to a few obvious headaches:
+
+Bloated memory foot-prints: With some Java application deployments requiring a hefty 1 or 2 GB of memory -- on occasions more -- to run properly in enterprise settings, this creates a resource black-hole on the server side in proportion to the amount of applications that need to be deployed in a single server instance.
+Class/Versioning conflicts: Evolving software pieces are another predicament under these scenarios. With everything loaded under the same umbrella -- JVM and classpath -- the greater the number of applications deployed in a single server instance, the greater the possibility applications might use different staple libraries -- JAR files -- making for a sure recipe to class loading and versioning conflicts.
+Duplicate or unnecessary parts: All application owners take care of providing the necessary dependencies for proper execution, however, once applications are deployed in production environments, it can become quite difficult to determine if certain dependencies aren't already being met by some other application or if an application is actually using 100% of the dependencies intended by its creators.
+
+
+
+ ### 4 Microservices - a specialization of SOA
+>_Microservices_ is a variant of the service-oriented architecture (SOA) architectural style that structures an application as a collection of loosely coupled services. In a microservices architecture, services should be fine-grained and the protocols should be lightweight. The benefit of decomposing an application into different smaller services is that it improves modularity and makes the application easier to understand, develop and test. It also parallelizes development by enabling small autonomous teams to develop, deploy and scale their respective services independently. It also allows the architecture of an individual service to emerge through continuous refactoring. Microservices-based architectures enable continuous delivery and deployment.
+
+Microservices Architecture Benefits: 
+- Software built as microservices can be broken down into multiple component services, so that each of these services can be deployed and then redeployed independently without compromising the integrity of an application. That means that microservice architecture gives developers the freedom to independently develop and deploy services.
+- Better fault isolation; if one microservice fails, the others will continue to work.
+- Code for different services can be written in different languages.
+- Easy integration and automatic deployment; using open-source continuous integration tools such as Jenkins, etc.
+- The microservice architecture enables continuous delivery.
+- Easy to understand since they represent a small piece of functionality, and easy to modify for developers, thus they can help a new team member become productive quickly.
+- The code is organized around business capabilities.
+- Scalability and reusability, as well as efficiency. Easy to scale and integrate with third-party services.
+- Components can be spread across multiple servers or even multiple data centers.
+- Work very well with containers, such as Docker.
+- Complement cloud activities.
+- Microservices simplify security monitoring because the various parts of an app are isolated. A security problem could happen in one section without affecting other areas of the project.
+- Increase the autonomy of individual development teams within an organization, as ideas can be implemented and deployed without having to coordinate with a wider IT delivery function.
+
+
+
+### 5. Web API: REST - SOAP (protocol)
 
 A Web API is a development in web services which implemented as Simple Object Access Protocol (SOAP) either as representational state transfer (REST) based communications. Web services make functional building-blocks accessible over standard Internet protocols independent of platforms and programming languages. All web-applications with decoupled functionality from the presentation of the application and moved to a web-services layer (API) are consist an implementation of an SOA methodology. 
 
@@ -168,3 +205,79 @@ A Web API is a development in web services which implemented as Simple Object Ac
 Discuss SOA best practices.
 
 
+
+## SOA Design Patterns
+As is the case with every theory, the practical implementations may vary singnificantly and may have diverging degrees of success. In general, even though there is no golden-bullet solution to fit every imaginable scenario, there are some general design patterns that ensure a certain degree of performance, robustness, and security.
+
+### 1. Agnostic Services
+Agnostic services implement logic that is common to multiple business problems. Separating agnostic logic into discrete services facilitates service reuse and composability. Furthermore, agnostic services could explicitly declare that they are agnostic. This makes it clear to future designers and builders that they are designed to be reused. 
+
+### 2. Atomic Service Transaction
+Services can be wrapped in atomic transactions with a rollback feature that reverses all actions and changes. Transaction management services can be implemented in the component layer and reused by multiple services. 
+
+### 3. Service Façade
+A service façade sits between a service and a contract. It eliminates the tight coupling between the service and its contract. This is intended to minimize changes to the service if the contract changes. A service can have multiple service façades to support multiple contracts. 
+
+### 4. Service Callback
+A service requires its consumers to call it asynchronously. If the consumer needs a response it provides a callback address. When the service reaches some milestone in processing it messages the consumer with a response. This approach frees resources and is useful when services are expected to be long running. 
+
+### 5. Multiple Service Contracts
+A service may support multiple contracts concurrently. This can be done to support backward compatibility (so that when a service changes all the consumers do not have to be updated). It is also done to provide different views to the service for different purposes (thus facilitating reuse). 
+
+### 6. Authentication Broker
+An authentication broker assumes responsibility for authenticating consumers. Consumers are issued a token they can use to access services. 
+
+### 7. Message Origin Authentication
+Digital certificates are used to authenticate clients. This results in preventing resource waste that could occur due to processing request of untrusted parties.
+
+
+## SOA Best Practices
+Apart from the designed patterns described in the previsous section, certain best practices can be adopted that will greatly enhance the SOA implementation.
+
+### 1. Automated Service Integration Test Suites
+To manage service quality, it is recommended that an automated suite of tests be maintained along with the service. The suite needs to be executable as needed, with little or no setup time required. It should be able to properly test the main components within each layer of the service stack.
+
+A related governance practice is to only certify a service for use once it has been verified that its automated integration test suite exists and is being maintained
+
+### 2. Service Testing Framework
+To automate and maintain service Integration Test Suites, there are some common capabilities that must be developed and reused. These include:
+- The ability to produce test harnesses in the absence of an application UI
+- Generation of test messages, based on the service description (WSDL)
+- Variation of inputs, using a data table 
+- Data set-up and tear-down scripts
+- Output of test reports
+- Definition of expected results
+- Execution of tests against each integrated layer of the stack (usually via a unit test environment)
+- Emulation of external services (mocks)
+- Inspection and validation of service messages from consuming applications
+- Sending multiple test messages via separate threads
+
+Such capabilities are packaged within an Integrated Test Framework (ITF). The framework is typically made up of commercial or open-source tools in combination with customisation or tailoring to meet the specific environment needs. Rather than repeatedly implement these capabilities with each service, the ITF should be
+maintained as a separate reusable asset, containing the commonly used utilities, tools and scripts.
+
+### 3. Managing Security Setup And Validation
+With service security implementations, the following factors should be taken into consideration:
+- It can be difficult to debug service handshakes, when the solution is secured from end-to-end, such as with token profiles
+- Negative case test scenarios are much more prevalent than positive case (such as message being recognized and processed)
+- The Integration Test Suite needs to be able to invoke secure services
+- Only a subset of the WS-Security specifications is interoperable across vendor and opensource framework implementations. Thus effort for potential workarounds should be allocated beforehand
+- Tests with external partners or consumers should plan to include consumer-side message and parameter logging, to narrow down debugging efforts
+
+### 4. Configurable Logging
+In order to quickly identify and narrow down on problems within SOA implementations - especially when involved in complex process flows - the use of logging is recommended. The logging should be configurable to multiple levels of detail and should enable correlation of tracing information across systems, such as via the logging of accurate timestamps or header identifiers.
+
+### 5. Test Driven Development (TDD)
+Several of the practices outlined hee can be categorised as general Test Driven Development (TDD) practices. TDD recommends beginning testing early and continuously testing, such as with each system build. As the systems evolve, there is the need for different forms of test harnesses, including the ability to mock or stub out parts that are not yet ready for prime time.
+
+Given the complexity and coordination requirements found in many SOA projects, it is not uncommon to see incremental or iterative development practices in use. Using TDD principles is recommended in order to complement such projects by allowing them to get instant test-based feedback on the latest changes.
+
+### 6. Standards Adherence
+Often while developing a new design, it is tempting to tweak the established standard just a little bit to make it fit perfectly. However, with SOA, the aim is to maintain compatibility with other standards based implementations. Tampering with a standard ends up creating a proprietary implementation, which may later cause integration problems. For example, altering a SOAP message format to augment speed requirements may result in the client being unable to understand the request altogether. Such issues may also remain dormant initially, which would mean that rectifying them at a later stage would be proportionally costlier.
+
+### 7. Interoperability
+In order to ensure that the maximum number of consumers can access the SOA service, it is important to design it in such a way that it can be interfaced from any platform and any programming language. Using a platform independent standard ensures that the users are free to choose their own implementation mechanisms. Apart from simply being friendly, this also means that the users will have to go to virtually no trouble at all to incorporate the SOA service into their existing architecture, which increases the business value of the service.
+
+### 8. New Technology Adoption
+In addition to the fairly robust core standards forming the basis of Web Services and SOA, there is also a family of rapidly developing new applications from a variety of vendors, ranging from well established corporations to "fly by night" outfits. While it is important to keep abreast of new technology and build on it where feasible, one needs to be slightly wary of new technology until it has passed rigorous testing under the scenario that it will ultimately be used in. Therefore, newer technology should typically be incorporated in the comparatively low risk areas of the architecture.
+
+Furthermore, since SOA services are meant to be consumed, it is often the case that the end-user will be exposed to some elements of the SOA technical stack. If those elements are alien to the end-user, the chances of service adoption will drop significantly.
