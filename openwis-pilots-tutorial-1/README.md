@@ -86,7 +86,7 @@ A SOA solution does not assume a pre-defined technical stack for implementation.
 
 
 ### 1. The Enterprise Service Bus (ESB)
-An enterprise service bus (ESB) implements a communication system between mutually interacting software applications in a service-oriented architecture (SOA). As it implements a software architecture for distributed computing, it therefore also implements a special variant of the more general client-server model, wherein, in general, any application using ESB can behave as server or client in turns. ESB promotes agility and flexibility with regard to high-level protocol communication between applications. The primary goal of the high-level protocol communication is enterprise application integration (EAI) of heterogeneous and complex service or application landscapes (a view from the network level).
+An enterprise service bus (ESB) implements a communication system between mutually interacting software applications in a service-oriented architecture (SOA). As it implements a software architecture for distributed computing, it therefore also implements a special variant of the more general client-server model, wherein, in general, any application using ESB can behave as server or client in turns. ESB promotes agility and flexibility with regard to high-level protocol communication between applications. The primary goal of the high-level protocol communication is enterprise application integration (EAI) of heterogeneous and complex service or application landscapes.
 
 
 There are a number of different ESB products available on the market today. Some products with wide usage are the following:
@@ -111,7 +111,6 @@ Monitoring / Administration|The goal of ESB is to make integration a simple task
 Security| ESB security involves two main components - making sure the ESB itself handles messages in a fully secure manner, and negotiating between the security assurance systems used by each of the systems that will be integrated.
 
 
-
 ### 2. Business Process Management
 
 Business Process Management (BPM) is a natural complement to Service-Oriented Architecture (SOA), and a mechanism through which an organization can apply SOA to high-value business challenges. Both SOA and BPM can be pursued individually, but the two approaches in concert offer reciprocal benefits. This article will address the benefits of implementing BPM on top of a SOA foundation. Those benefits include a more agile, flexible, enterprise, one that can more easily proliferate across divisions and geographies, and is more resilient to changes in underlying IT systems. In addition to discussing how the complementary disciplines of BPM and SOA inherently promote radical cooperation between business and technology groups within an organization, this article will discuss how to enrich the services delivered from within a SOA.
@@ -131,8 +130,7 @@ Employee Satisfaction|BPM eliminates a lot of red tape in organizations and allo
 Customer Focus|With leaner processes and increased productivity, employees are better able to focus on the customer. There will be an increased capacity to respond more quickly to proposals, build solutions faster and customize more quickly. BPM also brings people and technology together in a way that increases customer satisfaction. With BPM, employees are able to focus on activities that deliver the right results for customers and stakeholders.
 Consistency, Repeatability & Transferability |With BPMS, each task is executed the way it was planned and designed. Identical problems are addressed the same way and there is no need to reinvent the wheel, even if roles do change. Exceptional situations and responses can also be clearly defined with BPM to ensure they are handled appropriately.
 Sustainability|Business Processes are continually improved to adapt to changing organizational conditions so that they can deliver the expected results. This adaptation can be achieved with BPM while maintaining control or managerial oversight.
-Measurability|All processes can be measured end-to-end and compared to expected results. This helps to manage people and processes.
-BPM when implemented with technology, provides reporting and analytical tools for making executive decisions. With BPM, you can streamline processes and quantify how these processes are helping your organization optimize its workflows.
+Measurability|All processes can be measured end-to-end and compared to expected results. This helps to manage people and processes. BPM when implemented with technology, provides reporting and analytical tools for making executive decisions. With BPM, you can streamline processes and quantify how these processes are helping your organization optimize its workflows.
 Technology Integration |BPMS bridges the communication gap between business users and IT, thanks to the use of standards like BPMN. With BPM, the focus is not on “applications” but on “processes”, along with the applications that support them.
 
 
