@@ -20,9 +20,12 @@ upon and updated independently.
 Service is the essential concept of SOA.
 
 
-`Service is a system supplying a public need such as transport, communications, or utilities such as electricity and water`
+In the context of software architecture, service-orientation and service-oriented architecture, the term service refers to a software functionality or a set of software functionalities (such as the retrieval of specified information or the execution of a set of operations) with a purpose that can be reused by different clients for different purposes, together with the policies that should control its usage (based on the identity of the client requesting the service, for example).
 
-Service as team is not originally a technical concept. The idea of service has been used in many fields long time ago.
+OASIS defines service as "a mechanism to enable access to one or more capabilities, where the access is provided using a prescribed interface and is exercised consistent with constraints and policies as specified by the service description." [OASIS Reference Model for Service Oriented Architecture 1.0](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=soa-rm)
+
+
+Service as a term is not originally a technical concept. The idea of service has been used in many fields long time ago.
 Where a person or a company as the *service provider*, is offering to do something – carry goods and messages, look after vehicles, install and repair building roofs – that will benefit other people or companies, as the *service consumers*. The providers offer to contract with the consumers to do these things, in order that the consumers know in advance what they purchase. The idea has been adopted by technologists. They have established the concept of a software service.
 
 A *software service* is performed by a software application. It produces effects that have value to the people or organizations that are its consumers. It has a provider – a person or organization that takes responsibility for running the application to produce those effects. And there is an implicit or explicit contract between the provider and the consumers that the application will produce the effects that the consumers expect. Services can be provided over the web where also may have software interfaces. For example, there are web services that provide real-time stock quote information in a form where it can be analyzed by the consumers’ software. Software services can similarly be provided over internal or external networks, and a service performed by one application can be used by another application running on the same system. It is the organization of an enterprise’s software as software services that are provided internally in this way, and also externally, that is the essential characteristic of SOA.
