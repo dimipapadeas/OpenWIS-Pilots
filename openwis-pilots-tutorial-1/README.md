@@ -1,114 +1,66 @@
-### OWT1 - Service Oriented Architecture (SOA)
+# OWT1 - Service Oriented Architecture (SOA)
 
 
-## Introduction
+## Service Oriented Architecture (SOA) Definition
+The following is one of the many definitions of _Service Oriented Architecture_:
+
+> _Service Oriented Architecture (SOA)_ is an approach used to create an architecture based upon the use of services. Services carry out some small function, such as producing data, validating a customer, or providing simple analytics. The basic principles of service-oriented architecture are independent of vendors, products and technologies. A service is a discrete unit of functionality that can be accessed remotely and acted upon and updated independently.
+
+In October 2009, the "SOA Manifesto Working Group" came up with six core values that were included in the [SOA Manifesto](www.soa-manifesto.org):
+
+> 1. Business value is given more importance than technical strategy.
+> 2. Strategic goals are given more importance than project-specific benefits.
+> 3. Intrinsic inter-operability is given more importance than custom integration.
+> 4. Shared services are given more importance than specific-purpose implementations.
+> 5. Flexibility is given more importance than optimization.
+> 6. Evolutionary refinement is given more importance than pursuit of initial perfection.
 
 
-## Service-oriented architecture (SOA) Definition
+## Service Definition
+The _Service_ is the essential element of SOA. Its concept is not purely technical and has been used across many industries. In a broad definition, a _Service_ is:
 
-```
-Service-oriented architecture (SOA) is an approach used to create an architecture based upon the use of services.
-Services carry out some small function, such as producing data, validating a customer, or providing simple
-analytics. The basic principles of service-oriented architecture are independent of vendors, products 
-and technologies. A service is a discrete unit of functionality that can be accessed remotely and acted 
-upon and updated independently.
-```
+> When a person or a company as the **service provider**, is offering to do something – carry goods and messages, look after vehicles, install and repair building roofs – that will benefit other people or companies, as the **service consumers**. The providers offer to contract with the consumers to do these things, in order that the consumers know in advance what they purchase.
 
+When this concept was applied to software, the _Software Service_ was born:
 
+> In the context of software architecture, service-orientation and service-oriented architecture, the term service refers to a software functionality or a set of software functionalities (such as 
+> the retrieval of specified information or the execution of a set of operations) with a purpose that can be reused by different clients for different purposes, together with the policies that 
+> should control its usage (based on the identity of the client requesting the service, for example).
 
-### Service
-Service is the essential concept of SOA.
+[OASIS](https://www.oasis-open.org/) defines the _Service_ as: 
 
+> A mechanism to enable access to one or more capabilities, where the access is provided using a prescribed interface and is exercised consistent with constraints and policies as specified by the service description." [OASIS Reference Model for Service Oriented Architecture 1.0](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=soa-rm)
 
-In the context of software architecture, service-orientation and service-oriented architecture, the term service refers to a software functionality or a set of software functionalities (such as the retrieval of specified information or the execution of a set of operations) with a purpose that can be reused by different clients for different purposes, together with the policies that should control its usage (based on the identity of the client requesting the service, for example).
+## SOA Benefits
 
-OASIS defines service as "a mechanism to enable access to one or more capabilities, where the access is provided using a prescribed interface and is exercised consistent with constraints and policies as specified by the service description." [OASIS Reference Model for Service Oriented Architecture 1.0](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=soa-rm)
+The use of SOA provides major benefits:
 
+### 1. Loose Coupling
+An underlying premise in the application of SOA to information technology is the principle of loose coupling i.e. avoiding or at least encapsulating temporal, technological and organizational constraints in the information system design. Loosely coupled systems support late or dynamic binding to other components at run-time, and can mediate the difference in the component's structure, security model, protocols, and semantics, thus abstracting volatility.
 
-Service as a term is not originally a technical concept. The idea of service has been used in many fields long time ago.
-Where a person or a company as the *service provider*, is offering to do something – carry goods and messages, look after vehicles, install and repair building roofs – that will benefit other people or companies, as the *service consumers*. The providers offer to contract with the consumers to do these things, in order that the consumers know in advance what they purchase. The idea has been adopted by technologists. They have established the concept of a software service.
+Loose coupling in SOA is how the services are implemented without impacting other services or applications. The only interaction between the application and services is through the published interfaces. This means that applications are agnostic to service implementations and only need to respect the service contract.
 
-A *software service* is performed by a software application. It produces effects that have value to the people or organizations that are its consumers. It has a provider – a person or organization that takes responsibility for running the application to produce those effects. And there is an implicit or explicit contract between the provider and the consumers that the application will produce the effects that the consumers expect. Services can be provided over the web where also may have software interfaces. For example, there are web services that provide real-time stock quote information in a form where it can be analyzed by the consumers’ software. Software services can similarly be provided over internal or external networks, and a service performed by one application can be used by another application running on the same system. It is the organization of an enterprise’s software as software services that are provided internally in this way, and also externally, that is the essential characteristic of SOA.
+### 2. Location Transparency
+Location transparency means that the consumer of the service doesn’t need to know where the implementation of the services resides. It could be same server or other server across the internet. Consumer calls are agnostic to service location.
 
+### 3. Higher Reusability
+Properly designed and implemented SOA applications can provide infrastructure that allows utilization of services from heterogeneous environments such as C, C++, Java, .NET, etc. This results in extending the useful life of many core legacy systems indefinitely, no matter what language they originally developed in.
 
+### 4. Parallel Development
+The seperation of services allows their implementation to take place in parallel, as there will be fewer interdependencies compared to the ones found in a monolithic design. This - in turn - results to reduced cost and higher productivity.
 
-The use of services provides major benefits:
+### 5. Improved Testability
+The fact that SOA consists of independent and reusable services, means that these services can also be tested independently. This allows the tester to not have to test/debug the whole application, but only the services where it is required. Improved testability usually results to fewer defects and a higher overall level of quality.
 
-In contrast to the use of large applications, which tend to be “information silos” that cannot readily exchange information with each other, the use of finer-grained software services improves information flow within and between enterprises.
-
-Integrating major applications is often expensive. SOA can save integration costs.
-
-Organizing internal software as services makes it easier to expose its functionality externally. Which leads to increased visibility that can have business value as, for example, when a logistics company makes the tracking of shipments visible to its customers, increasing customer satisfaction and reducing the costly overhead of status enquiries.
-
-Business processes are often dependent on their supporting software. It can be hard to change large, monolithic programs. This can make it difficult to change the business processes to meet new requirements (arising, for example, from changes in legislation) or to take advantage of new business opportunities. A service-based software architecture is easier to change – it has greater organizational flexibility, enabling it to avoid penalties and reap commercial advantage. (This is one of the ways in which SOA can make an enterprise more “agile”.)
-The service concept also makes possible further features of SOA. These can provide additional benefits, as explained in the rest of this section.
-
-Service Reusability
-Clear service descriptions are a starting point for service re-use, which can provide another major benefit of SOA:
-
-Using existing software modules rather than writing new ones means lower development and testing costs and – in many cases an even greater saving – lower maintenance costs.
-
-
-
-## Defining concepts
-A manifesto was published for service-oriented architecture in October, 2009. This came up with six core values which are listed as follows:[SOA Manifesto](www.soa-manifesto.org)
-
-1. Business value is given more importance than technical strategy.
-2. Strategic goals are given more importance than project-specific benefits.
-3. Intrinsic inter-operability is given more importance than custom integration.
-4. Shared services are given more importance than specific-purpose implementations.
-5. Flexibility is given more importance than optimization.
-6. Evolutionary refinement is given more importance than pursuit of initial perfection.
-
-
-`rephraising`
- ## Why SOA
-
-Loosely coupling
-An underlying premise in the application of SOA to information technology is the principle of loose coupling i.e. avoiding or at least encapsulating temporal, technological and organizational constraints in the information system design.
-Loosely coupled systems support late or dynamically binding to other components while running, and can mediate the difference in the component's structure, security model, protocols, and semantics, thus abstracting volatility.
-Loose coupling in SOA is how the services are implemented without impacting other services or application. The only interaction between the application and services is through the publish interfaces. This means application doesn’t interested how the services been implemented.
-
-Location transparency
-
-Location transparency means that the consumer of the service doesn’t care where the implementation of the services resides. It could be same server or other server across the internet. Consumer calls are agnostic to service location.
-
-
-Reusability
-SOA compliance to web services and hence applications running on either platform can also consume services running on the other as web services that facilitate reuse. Properly designed implemented SOA application provide infrastructure that makes reuse possibilities in heterogeneous environment such as C,C++,Java, .Net etc.
-Managed environments can also wrap COBOL legacy systems and present them  as services. This has extended the useful life of many core legacy systems indefinitely, no matter what language they originally used
-
-
-
-Parallel Development
-Service Oriented Architecture advocate more parallelism in development environment as SOA is based on layers based architecture. Since Service Oriented Architecture confers layer based architecture therefore it advocates more parallel development. SOA consist of inventory of contract based independent services which could be developed in parallel.
-Above figure shows developers could develop independent services in parallel and services will be completed on the same schedule time. Business processes will be accessing the independent services orchestrate them and provide the concrete business functionality.
-
-
-Higher Availability & Better Scalability
-
-SOA a Multi-layered architecture can be individually clustered with appropriate load balancing to scale up the system.
-
-As we know redundancy is the key for high availability SOA achieve redundancy by introducing redundant elements via clustering.  SOA uses layer architecture to facilitate the logical decoupling that allow to design a very resilient system with each layer of the stack.
-
-The other aspect of SOA testing is that testing of independent reusable service which can be tested independently which force tester to not to test the overall application unless all the service passed successfully. More and better testing usually means fewer defects and a higher overall level of quality.
-
-
-Code Mobility
-Since location transparency is a property of a service-oriented architecture, code mobility becomes a reality. The lookup and dynamic binding to a service means that the client does not care where the service is located. Therefore, an organization has the flexibility to move services to different machines, or to move a service to an external provider.
-
-Rich Testability
-
-Since SOA confers layer based architecture therefore it breaks testing into definable testing areas such as services, security, and governance etc. These testing areas would be tested separately using best tools and approach.
-For reference JUnit allows for creation of a test suite. The test suite consists of number of procedure, each of which is designed to test a service or component. In SOA environment automation of testing is very common for frequently changing enterprise services which improve regression testing efficiency.
-The other aspect of SOA testing is that testing of independent reusable service which can be tested independently which force tester to not to test the overall application unless all the service passed successfully. More and better testing usually means fewer defects and a higher overall level of quality.
+### 6. Higher Scalability & Availability
+The isolated nature of services allows easier scaling with less cost than that of a monolithic system. In a typical scenario, if a specific service is very heavy in terms of performance/resources, it can be scaled individually and improve performance, without having to scale the whole application. This - of course - also affects high availability in a similar manner.
 
 
 
 
 ## General SOA principles
 
-According to SOA, a service must have the following Principles:
+There are no industry standards relating to the exact composition of a service-oriented architecture, although many industry sources have published their own principles. Some of these include the following:
 
 Principle | Description
 ----|---------------
@@ -129,11 +81,11 @@ Service encapsulation|Many services which were not initially planned under SOA, 
 
 Since the definition of SOA does not enforce any technological standards, its implementation can take many forms, such as the following:
 
-
-
 ## Illustrate possible Approaches to SOA
+`stil under construction`
+A SOA solution often relies on many integration components, such as:
 
-A SOA solution often relies on many integration components, such as
+
 
 ### 1. The Enterprise Service Bus (ESB)
 
@@ -141,7 +93,18 @@ The first approach that allows to build and implement an optimal SOA is the ente
 This approach helps to coordinate and arrange the different elements that are in the form of distributed services on a network.
 ESB promotes agility and flexibility with regard to high-level protocol communication between applications.
 Also considers the systems as discrete and distributed services that connect to one another through message oriented infrastructure that is asynchronous.This kind of a message-oriented infrastructure makes it possible to have loosely coupled connections between independent services or modules.Networkwise, the primary goal of the high-level protocol communication is enterprise application integration (EAI) of heterogeneous and complex services.
+
 [ESB image]
+
+delete this:
+~An enterprise service bus (ESB) implements a communication system between mutually interacting software applications in 
+a service-oriented architecture (SOA). It implements a software architecture as depicted on the right. As it implements
+a software architecture for distributed computing, it therefore also implements a special variant of the more general 
+client-server model, wherein, in general, any application using ESB can behave as server or client in turns. ESB promotes
+agility and flexibility with regard to high-level protocol communication between applications. The primary goal of the
+high-level protocol communication is enterprise application integration (EAI) of heterogeneous and complex service 
+or application landscapes (a view from the network level).~
+
 
 
 ### 2. Business Process Management
@@ -165,7 +128,6 @@ and configuration files that explicitly declare their external dependencies.
 A Web API is a development in web services which implemented as Simple Object Access Protocol (SOAP) either as representational state transfer (REST) based communications. Web services make functional building-blocks accessible over standard Internet protocols independent of platforms and programming languages. All web-applications with decoupled functionality from the presentation of the application and moved to a web-services layer (API) are consist an implementation of an SOA methodology. 
 
 
+
 Discuss SOA best practices.
-
-
 
