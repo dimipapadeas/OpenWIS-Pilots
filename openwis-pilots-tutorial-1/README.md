@@ -80,14 +80,11 @@ The isolated nature of services allows easier scaling with less cost than that o
 
 
 
-
-
 Since the definition of SOA does not enforce any technological standards, its implementation can take many forms, such as the following:
 
 ## Illustrate possible Approaches to SOA
-`stil under construction`
-A SOA solution often relies on many integration components, such as:
 
+A SOA solution often relies on many integration components, such as:
 
 
 ### 1. The Enterprise Service Bus (ESB)
@@ -96,8 +93,6 @@ The first approach that allows to build and implement an optimal SOA is the ente
 This approach helps to coordinate and arrange the different elements that are in the form of distributed services on a network.
 ESB promotes agility and flexibility with regard to high-level protocol communication between applications.
 Also considers the systems as discrete and distributed services that connect to one another through message oriented infrastructure that is asynchronous.This kind of a message-oriented infrastructure makes it possible to have loosely coupled connections between independent services or modules.Networkwise, the primary goal of the high-level protocol communication is enterprise application integration (EAI) of heterogeneous and complex services.
-
-[ESB image]
 
 
 There are a number of different ESB products available on the market today.  Some, such as WebSphere Message Broker or TIBCO BusinessWorks which function in a broker-like manner.
@@ -123,7 +118,6 @@ Security| ESB security involves two main components - making sure the ESB itself
 
 Many companies have tried to solve business process problems by the implementation of Business Process Management approach. This approach takes into consideration the IT assets and systems as activities or tasks that participate in well synchronized and well-orchestrated business procedures.BPM tools are mostly used at the time of modeling and designing procedures rather than using them to construct processes that can reach integration objectives. This is the main challenge of BPM. By BPM solutions on their own are enough to meet SOA requirements because they do not consist of the runtime environment that is needed for loosely coupled modules.
 
-`check`
 In BPM frameworks, solutions are nearly always based on a workflow or set of workflows. The concept is that work in a real-time business environment should not be static, rather it should progress through a series of steps (‘a process’) in time. Basing a solution on sequential activities is effective in encouraging teams to reach completion of goals within a set period. The process platform encourages progression through tasks by sending the participants reminders and indications of their completion status and due date. Because of this, teams who use these solutions tend to perform faster and accomplish goals more consistently.
 
 
@@ -144,10 +138,6 @@ Sustainability|Business Processes are continually improved to adapt to changing 
 Measurability|All processes can be measured end-to-end and compared to expected results. This helps to manage people and processes.
 BPM when implemented with technology, provides reporting and analytical tools for making executive decisions. With BPM, you can streamline processes and quantify how these processes are helping your organization optimize its workflows.
 Technology Integration |BPMS bridges the communication gap between business users and IT, thanks to the use of standards like BPMN. With BPM, the focus is not on “applications” but on “processes”, along with the applications that support them.
-
-
-
-This article has highlighted some of the benefits that business process management can bring to an organization. BPM is not a software application or a group within an organization, it is a way of working within the organization that ensures it can derive its benefits.
 
 
 
@@ -175,8 +165,7 @@ Class/Versioning conflicts: Evolving software pieces are another predicament und
 Duplicate or unnecessary parts: All application owners take care of providing the necessary dependencies for proper execution, however, once applications are deployed in production environments, it can become quite difficult to determine if certain dependencies aren't already being met by some other application or if an application is actually using 100% of the dependencies intended by its creators.
 
 
-
- ### 4 Microservices - a specialization of SOA
+ ### 4. Microservices - a specialization of SOA
 >_Microservices_ is a variant of the service-oriented architecture (SOA) architectural style that structures an application as a collection of loosely coupled services. In a microservices architecture, services should be fine-grained and the protocols should be lightweight. The benefit of decomposing an application into different smaller services is that it improves modularity and makes the application easier to understand, develop and test. It also parallelizes development by enabling small autonomous teams to develop, deploy and scale their respective services independently. It also allows the architecture of an individual service to emerge through continuous refactoring. Microservices-based architectures enable continuous delivery and deployment.
 
 Microservices Architecture Benefits: 
@@ -199,11 +188,6 @@ Microservices Architecture Benefits:
 ### 5. Web API: REST - SOAP (protocol)
 
 A Web API is a development in web services which implemented as Simple Object Access Protocol (SOAP) either as representational state transfer (REST) based communications. Web services make functional building-blocks accessible over standard Internet protocols independent of platforms and programming languages. All web-applications with decoupled functionality from the presentation of the application and moved to a web-services layer (API) are consist an implementation of an SOA methodology. 
-
-
-
-Discuss SOA best practices.
-
 
 
 ## SOA Design Patterns
