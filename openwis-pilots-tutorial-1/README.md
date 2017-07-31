@@ -1,44 +1,44 @@
 # OWT1 - Service Oriented Architecture (SOA)
 
 
-## Table of Contents  
 
+Table of Contents
+=================
 
- Chapter | node
------- | -----
-[Service Oriented Architecture (SOA) Definition](#service-oriented-architecture-soa-definition)|   
-[General SOA Principles](#general-soa-principles)|
-[SOA Benefits](#soa-benefits)|
-||[1. Loose Coupling](#1-loose-coupling)
-||[2. Location Transparency](#2-location-transparency)
-||[3. Higher Reusability](#3-higher-reusability)
-||[4. Parallel Development](#4-parallel-development)
-||[5. Improved Testability](#5-improved-testability)
-||[6. Higher Scalability & Availability](#6-higher-scalability--availability)
-[SOA Technological Approaches](#soa-technological-approaches)|
-||[1. The Enterprise Service Bus (ESB)]( #1-the-enterprise-service-bus-esb)
-||[2. Business Process Management](#2-business-process-management)
-||[3. OSGi framework](#3-osgi-framework)
-|| [4. Microservices - a specialization of SOA](#4-microservices---a-specialization-of-soa)
-||[5. Web APIs: REST/SOAP](#5-web-apis-restsoap)
-[SOA Design Patterns](#soa-design-patterns)|
-||[1. Agnostic Services](#1-agnostic-services)
-||[2. Atomic Service Transaction](#2-atomic-service-transaction)
-||[3. Service Façade](#3-service-façade)
-||[4. Service Callback](#4-service-callback)
-||[5. Multiple Service Contracts](#5-multiple-service-contracts)
-||[6. Authentication Broker](#6-authentication-broker)
-||[7. Message Origin Authentication](#7-message-origin-authentication)
-[SOA Best Practices #soa-best-practices](#soa-best-practices)|
-||[1. Automated Service Integration Test Suites](#1-automated-service-integration-test-suites)
-||[2. Service Testing Framework](#2-service-testing-framework)
-||[3. Managing Security Setup And Validation](#3-managing-security-setup-and-validation)
-||[4. Configurable Logging](#4-configurable-logging)
-||[5. Test Driven Development (TDD)](#5-test-driven-development-tdd)
-||[6. Standards Adherence](#6-standards-adherence)
-||[7. Interoperability](#7-interoperability)
-||[8. New Technology Adoption](#8-new-technology-adoption)
-
+* [OWT1 \- Service Oriented Architecture (SOA)](#owt1---service-oriented-architecture-soa)
+  * [Service Oriented Architecture (SOA) Definition](#service-oriented-architecture-soa-definition)
+  * [Service Definition](#service-definition)
+  * [General SOA Principles](#general-soa-principles)
+  * [SOA Benefits](#soa-benefits)
+    * [1\. Loose Coupling](#1-loose-coupling)
+    * [2\. Location Transparency](#2-location-transparency)
+    * [3\. Higher Reusability](#3-higher-reusability)
+    * [4\. Parallel Development](#4-parallel-development)
+    * [5\. Improved Testability](#5-improved-testability)
+    * [6\. Higher Scalability &amp; Availability](#6-higher-scalability--availability)
+  * [SOA Technological Approaches](#soa-technological-approaches)
+    * [1\. The Enterprise Service Bus (ESB)](#1-the-enterprise-service-bus-esb)
+    * [2\. Business Process Management](#2-business-process-management)
+    * [3\. OSGi framework](#3-osgi-framework)
+    * [4\. Microservices \- a specialization of SOA](#4-microservices---a-specialization-of-soa)
+    * [5\. Web APIs: REST/SOAP](#5-web-apis-restsoap)
+  * [SOA Design Patterns](#soa-design-patterns)
+    * [1\. Agnostic Services](#1-agnostic-services)
+    * [2\. Atomic Service Transaction](#2-atomic-service-transaction)
+    * [3\. Service Façade](#3-service-fa%C3%A7ade)
+    * [4\. Service Callback](#4-service-callback)
+    * [5\. Multiple Service Contracts](#5-multiple-service-contracts)
+    * [6\. Authentication Broker](#6-authentication-broker)
+    * [7\. Message Origin Authentication](#7-message-origin-authentication)
+  * [SOA Best Practices](#soa-best-practices)
+    * [1\. Automated Service Integration Test Suites](#1-automated-service-integration-test-suites)
+    * [2\. Service Testing Framework](#2-service-testing-framework)
+    * [3\. Managing Security Setup And Validation](#3-managing-security-setup-and-validation)
+    * [4\. Configurable Logging](#4-configurable-logging)
+    * [5\. Test Driven Development (TDD)](#5-test-driven-development-tdd)
+    * [6\. Standards Adherence](#6-standards-adherence)
+    * [7\. Interoperability](#7-interoperability)
+    * [8\. New Technology Adoption](#8-new-technology-adoption)
 
 
 
