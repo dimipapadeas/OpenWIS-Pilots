@@ -1,6 +1,5 @@
 package com.owt2.demo;
 
-
 import javax.annotation.PostConstruct;
 import javax.inject.Singleton;
 
