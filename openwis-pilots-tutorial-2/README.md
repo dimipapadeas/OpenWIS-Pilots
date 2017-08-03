@@ -31,7 +31,9 @@ In any case of Continuous delivery, a monolithic application even for a small ch
 
 If one service fails under monolithic application wherein entire application has to be brought down.
 
-Fault Tolerance When a specific service is under heavy pressure it brings the whole application down with it. For instance in cases when Database connection pool is getting exhausted the entire application bogging down.
+#### Fault Tolerance 
+
+When a specific service is under heavy pressure it brings the whole application down with it. For instance in cases when Database connection pool is getting exhausted the entire application bogging down.
 
 
 
@@ -40,7 +42,7 @@ The answer to [Monolithic architectures drawback ](path), is not to rip and repl
 
 ## OSGi
 
-Java only supports the usage of access modifiers, but every public class can be called from another software component. What is desired is a way to explicitly define the API of a software component. The OSGi specification fills this gap
+Java only supports the usage of access modifiers, but every public class can be called from another software component. What is desired is a way to explicitly define the API of a software component. The OSGi specification fills this gap.
 
 >The OSGi specification describes a modular system and a service platform for the Java programming language that implements a complete and dynamic component model, something that does not exist in standalone Java/VM environments. Applications or components, coming in the form of bundles for deployment, can be remotely installed, started, stopped, updated, and uninstalled without requiring a reboot; management of Java packages/classes is specified in great detail. Application life cycle management is implemented via APIs that allow for remote downloading of management policies. The service registry allows bundles to detect the addition of new services, or the removal of services, and adapt accordingly.
 
@@ -103,7 +105,6 @@ ProSyst|1.5|http://www.prosyst.com
 ![OSGi stack](wiki_img/OSGi_framework.png)
 
 
-OSGi conceptual layers
 
 ### OSGi conceptual layers
 
@@ -143,11 +144,11 @@ A OSGi Bundle is
  In addition to the headers that can be defined for a non-OSGi JAR or WAR file, the bundle manifest file for an OSGi bundle contains OSGi-specific headers. The metadata that is specified in these headers enables the OSGi Framework to process the modular aspects of the
  bundle.
 
- 
+ A simple Manifest:
 ![A simple Manifest](wiki_img/simpleManifest.png)
 
 
-
+A more complex Manifest:
 ![A more complex one](wiki_img/aMoreComplexManifest.png)
 
 
@@ -203,7 +204,6 @@ For embedded applications, a special power save start level could disable all bu
 #### High priority features
 
 There are some bundles that should be started early in the startup process, such as a logging service, or a splash screen. That is accomplished by setting such bundles a low start level.
-
 
 
 ### OSGi Services
@@ -265,7 +265,6 @@ public class AServiceImpl implements AService {
 ![Apache Karaf](wiki_img/Karaf.png)
 
  
-
 >Apache Karaf is a modern and polymorphic container.
 Karaf can be used standalone as a container, supporting a wide range of applications and technologies. It also supports the "run anywhere" (on any machine with Java, cloud, docker images, …​) using the embedded mode.
 It’s a lightweight, powerful, and enterprise ready platform.
