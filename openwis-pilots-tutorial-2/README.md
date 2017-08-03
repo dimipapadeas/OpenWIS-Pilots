@@ -3,10 +3,7 @@
 [TOC]
 
 
-## Introduction - from monolithic to modular
-
-
-## Monolithic architecture
+## Introduction - From monolithic to modular architecture
 
 In software engineering, a monolithic architecture has been used to describe a single-tiered application in which all MVC components are combined into a single program within a single platform. A monolithic application is self-contained, and independent from other applications.
 Monolithic application can be considered as a big container where in all components of the application are assembled together and tightly packaged in various formats such as EAR, WAR, JAR etc. Which is finally deployed as a single unit on the application server.
@@ -34,7 +31,9 @@ In any case of Continuous delivery, a monolithic application even for a small ch
 
 If one service fails under monolithic application wherein entire application has to be brought down.
 
-Fault Tolerance When a specific service is under heavy pressure it brings the whole application down with it. For instance in cases when Database connection pool is getting exhausted the entire application bogging down.
+#### Fault Tolerance 
+
+When a specific service is under heavy pressure it brings the whole application down with it. For instance in cases when Database connection pool is getting exhausted the entire application bogging down.
 
 
 
@@ -43,7 +42,7 @@ The answer to [Monolithic architectures drawback ](path), is not to rip and repl
 
 ## OSGi
 
-Java only supports the usage of access modifiers, but every public class can be called from another software component. What is desired is a way to explicitly define the API of a software component. The OSGi specification fills this gap
+Java only supports the usage of access modifiers, but every public class can be called from another software component. What is desired is a way to explicitly define the API of a software component. The OSGi specification fills this gap.
 
 >The OSGi specification describes a modular system and a service platform for the Java programming language that implements a complete and dynamic component model, something that does not exist in standalone Java/VM environments. Applications or components, coming in the form of bundles for deployment, can be remotely installed, started, stopped, updated, and uninstalled without requiring a reboot; management of Java packages/classes is specified in great detail. Application life cycle management is implemented via APIs that allow for remote downloading of management policies. The service registry allows bundles to detect the addition of new services, or the removal of services, and adapt accordingly.
 
@@ -59,6 +58,9 @@ The OSGi standards are defined in the OSGi Alliance and published in OSGi specif
 Implementations realize specification chapter(s) from the OSGi specification documents.
 
 `image pending`
+
+
+
 
 ### Apache Felix
 
@@ -77,8 +79,6 @@ Equinox began as a project to replace the original Eclipse plug-in runtime in ve
 
 
 ### Knopflerfish
-http://www.knopflerfish.org
-
 
 Knopflerfish  OSGi Framework  (open source and enterprise editions )
 
@@ -87,11 +87,17 @@ The Knopflerfish R6 OSGi framework and related Services is implemented in accord
 Knopflerfish Pro is Makewave’s certified release 4, version 4.2 compliant OSGi service platform, based directly on the open source Knopflerfish OSGi distribution. Knopflerfish Pro is a fully supported product, intended for professional use, and gives companies the assurance required to use open source software in commercial systems. Knopflerfish Pro extends open source Knopflerfish by adding a set of bundles only available in the Pro version, making Knopflerfish Pro a complete implementation of the OSGi Release 4, version 4.2 specifications. This includes the OSGi defined UPnP services as well as the residential and mobile management services, e.g. DMT Admin.
 
 
-
 ### ProSyst
 
 ProSyst is a OSGi implementation targeting embedded devices. Currently supported by Bosch Software Innovations.
 
+
+Implementation|Specification Version| Link
+---|--|---
+Apache Felix|1.7|http://felix.apache.org
+Eclipse Equinox|1.8|http://eclipse.org/equinox
+Knopflerfish|1.7|http://www.knopflerfish.org	
+ProSyst|1.5|http://www.prosyst.com	
 
 
 ## OSGi basics
@@ -99,7 +105,6 @@ ProSyst is a OSGi implementation targeting embedded devices. Currently supported
 ![OSGi stack](wiki_img/OSGi_framework.png)
 
 
-OSGi conceptual layers
 
 ### OSGi conceptual layers
 
@@ -139,11 +144,11 @@ A OSGi Bundle is
  In addition to the headers that can be defined for a non-OSGi JAR or WAR file, the bundle manifest file for an OSGi bundle contains OSGi-specific headers. The metadata that is specified in these headers enables the OSGi Framework to process the modular aspects of the
  bundle.
 
- 
+ A simple Manifest:
 ![A simple Manifest](wiki_img/simpleManifest.png)
 
 
-
+A more complex Manifest:
 ![A more complex one](wiki_img/aMoreComplexManifest.png)
 
 
@@ -199,7 +204,6 @@ For embedded applications, a special power save start level could disable all bu
 #### High priority features
 
 There are some bundles that should be started early in the startup process, such as a logging service, or a splash screen. That is accomplished by setting such bundles a low start level.
-
 
 
 ### OSGi Services
@@ -261,7 +265,6 @@ public class AServiceImpl implements AService {
 ![Apache Karaf](wiki_img/Karaf.png)
 
  
-
 >Apache Karaf is a modern and polymorphic container.
 Karaf can be used standalone as a container, supporting a wide range of applications and technologies. It also supports the "run anywhere" (on any machine with Java, cloud, docker images, …​) using the embedded mode.
 It’s a lightweight, powerful, and enterprise ready platform.
@@ -275,26 +278,26 @@ Apache Karaf can be scaled from a very lightweight container to a fully featured
 Apache Karaf provides a simple and flexible way to provision applications. In Apache Karaf, the application provisioning is an Apache Karaf feature. When a feature is being installed, Apache Karaf installs all resources described in the feature. It means that it will automatically resolves and installs all bundles, configurations, and dependency features described in the feature.
 
 A feature describes an application as:
-- a name
-- a version
-- a optional description (eventually with a long description)
-- a set of bundles
-- optionally a set configurations or configuration files
-- optionally a set of dependency features
+- A name
+- A version
+- An optional description (eventually with a long description)
+- A set of bundles
+- Optionally a set configurations or configuration files
+- Optionally a set of dependency features
 
 
 ### Karaf Enterprise features
-  Karaf as is delivered, already, has more features than the vanilla osgi environment. In addition to those there are more out of the box:
+  Karaf, as is delivered, has more features than the vanilla OSGi environment. In addition to those, there are even more out of the box:
    
 
 ![](wiki_img/KarafEnterpriseFeatures.png)
 
 
-Karaf shell
-- Text-based administration console
-- Default interface when Karaf boots up
-- Useful to debug and view logs
-- You can connect to a background-running, local Karaf via ./bin/client. •
+### Karaf shell
+
+Karaf's defalut interface when Karaf boots up is Karaf Shell, its a text-based administration console, useful also for debuging and view logs. Karaf shell allows connect to a background-running, local Karaf via: 
+
+    /bin/client
 
 
 ### Karaf installation
@@ -313,23 +316,19 @@ Then open a cmd client and navigate to the {karaf home}\bin path and execute:
 ![](wiki_img/voila-Karaf.png)
 
 
-To acces Karaf logger
+To acces Karaf logger from the Karaf home folder:
 
-from the Karaf home  folder :
-tail -F data\log\karaf.log
+    tail -F data\log\karaf.log
 
 ![](wiki_img/karaf.log.png)
-
 
 To exit Apache Karaf console:
 
     Ctrl + D
 
-Karaf Web Console
+### Karaf Web Console
 
-Apache Karaf provides an optional WebConsole.
-
-This WebConsole provides a graphical web GUI to see and manage your Apache Karaf container.
+Apache Karaf provides an optional WebConsole. This WebConsole provides a graphical web GUI to see and manage your Apache Karaf container.
 
 You can use the WebConsole to:
 - manage Apache Karaf features
@@ -342,24 +341,24 @@ You can use the WebConsole to:
 Installation of WebConsole
 To enable the Apache Karaf WebConsole, you just have to install the `webconsole feature`:
 
-```
-karaf@root()> feature:install webconsole
 
-```
+    karaf@root()> feature:install webconsole
 
 ![](wiki_img/KarafConsole.png)
 
 Navigate to [default webconsole page](http://localhost:8181/system/console/bundles)
 
-Authentication required , the Default user name /password is :
+Authentication required, the default user name / password is :
+       
        karaf / karaf
 
 Optionally it can be modified  at:
-{KARAF_HOME}\etc\users.properties
 
-http://localhost:8181/system/console/bundles
+    {KARAF_HOME}\etc\users.properties
+   
 
-After the successful log in :
+
+After the successful log in:
 
 ![Apache Karaf Web Console Bundles](wiki_img/ApacheKarafWebConsoleBundles.png)
 
@@ -373,7 +372,8 @@ After the successful log in :
 ### Deploy a sample application
 While you will learn in the Karaf user’s guide how to fully use and leverage Apache Karaf, let’s install a sample application for now:
 
-Clone and build the OWT2 code.
+  
+   Clone and build the OWT2 code.
 
 Add bundle's repo:
 
@@ -381,7 +381,6 @@ Add bundle's repo:
    
 
 Install prerequisites:
-
 
      install -s wrap:mvn:javax.inject/javax.inject/1
 
