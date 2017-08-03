@@ -375,7 +375,7 @@ After the successful log in:
 While you will learn in the Karaf user’s guide how to fully use and leverage Apache Karaf, let’s install a sample application for now:
 
   
-   Clone and build the OWT2 code.
+   Clone and build the [OWT2 code](https://github.com/dimipapadeas/OpenWIS-Pilots/tree/master/openwis-pilots-tutorial-2/OWT2).
 
 Add bundle's repo:
 
