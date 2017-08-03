@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	feature:repo-add mvn:com.owt2.demo/features/1.0.0-SNAPSHOT/xml/features 
+-->
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0"
+	name="bundle-101">
+	<feature name="bundle-101-deps" version="${project.version}">
+		<feature>pax-cdi</feature>
+		<bundle>wrap:mvn:javax.inject/javax.inject/${javax.inject.version}
+		</bundle>
+	</feature>
+
+</features>
