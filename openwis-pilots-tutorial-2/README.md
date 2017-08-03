@@ -161,6 +161,9 @@ Most IDEs provide auto generation mechanisms for manifests but also convenient e
 
 OSGi is a dynamic platform. This means that bundles may be installed, started, updated, stopped, and uninstalled at any time during the running of the framework.
 
+![](wiki_img/OWT-2_1.png)
+
+
 OSGi Bundle Status|Description
 ----|----------
 INSTALLED|The bundle has been installed into the OSGi container, but some of the bundle's dependencies have not yet been met. The bundle requires packages that have not been exported by any currently installed bundle.
@@ -302,11 +305,10 @@ from http://karaf.apache.org/download.html
 download the Binary Distribution zip
 select a folder and extract it, that folder will be the Karaf-home
 
-Then open a cmd client and navigate to the {karaf home}\bin  path and execute:
+Then open a cmd client and navigate to the {karaf home}\bin path and execute:
 
-D:\apache-karaf-4.1.1\bin
-
-and run karaf.bat
+    cd D:\apache-karaf-4.1.1\bin
+    karaf.bat
 
 ![](wiki_img/voila-Karaf.png)
 
@@ -316,7 +318,7 @@ To acces Karaf logger
 from the Karaf home  folder :
 tail -F data\log\karaf.log
 
-![](wiki_img/karaf.log.png
+![](wiki_img/karaf.log.png)
 
 
 To exit Apache Karaf console:
