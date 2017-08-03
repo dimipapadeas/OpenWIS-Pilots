@@ -306,9 +306,10 @@ Karaf's defalut interface when Karaf boots up is Karaf Shell, its a text-based a
 
 (Windows)
 
-from http://karaf.apache.org/download.html
-download the Binary Distribution zip
-select a folder and extract it, that folder will be the Karaf-home
+Download the Binary Distribution zip from [Karaf official page](http://karaf.apache.org/download.html)
+
+Select a folder and extract it, that folder will be the Karaf-home, in this turorial we use `D:\apache-karaf-4.1.1\bin`
+
 
 Then open a cmd client and navigate to the {karaf home}\bin path and execute:
 
