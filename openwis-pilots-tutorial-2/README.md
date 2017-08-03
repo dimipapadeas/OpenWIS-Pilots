@@ -37,7 +37,7 @@ When a specific service is under heavy pressure it brings the whole application 
 
 
 
-The answer to [Monolithic architectures drawback ](path), is not to rip and replace systems or applications, nor to completely renovate them, but rather to find a way to leverage existing software investments so that overall organizational goals are effectively supported. That solution is to eliminate dependencies and enable quick testing and deployment of code changes, greater modularity, loose coupling and all hold promise in simplifying the integration task. In other words modular Architecture. Modular orientation helps to accomplish these goals by making systems more responsive to business needs, simpler to develop and easier to maintain and manage. Implementing a solution architecture based upon modularity helps organizations plan ahead for change, rather than responding reactively.
+The answer to [Monolithic architectures drawback ](#monolithic-architectures-drawback), is not to rip and replace systems or applications, nor to completely renovate them, but rather to find a way to leverage existing software investments so that overall organizational goals are effectively supported. That solution is to eliminate dependencies and enable quick testing and deployment of code changes, greater modularity, loose coupling and all hold promise in simplifying the integration task. In other words modular Architecture. Modular orientation helps to accomplish these goals by making systems more responsive to business needs, simpler to develop and easier to maintain and manage. Implementing a solution architecture based upon modularity helps organizations plan ahead for change, rather than responding reactively.
  
 
 ## OSGi
@@ -55,8 +55,7 @@ The OSGi Specifications can be obtained from [here](http://www.osgi.org/Specific
 The OSGi standards are defined in the OSGi Alliance and published in OSGi specification documents such as the Core and Compendium specifications. These specifications contain chapters each of which describe a specific OSGi standard. This page contains most popular implementations of OSGi standards, both commercial and open source implementations are included.
 Implementations realize specification chapter(s) from the OSGi specification documents.
 
-`image pending`
-
+![](wiki_img/OWT-2_3.png)
 
 
 ### Apache Felix
@@ -84,17 +83,23 @@ The Knopflerfish R6 OSGi framework and related Services is implemented in accord
 Knopflerfish Pro is Makewave’s certified release 4, version 4.2 compliant OSGi service platform, based directly on the open source Knopflerfish OSGi distribution. Knopflerfish Pro is a fully supported product, intended for professional use, and gives companies the assurance required to use open source software in commercial systems. Knopflerfish Pro extends open source Knopflerfish by adding a set of bundles only available in the Pro version, making Knopflerfish Pro a complete implementation of the OSGi Release 4, version 4.2 specifications. This includes the OSGi defined UPnP services as well as the residential and mobile management services, e.g. DMT Admin.
 
 
-### ProSyst
+### Gemini Blueprint
 
-ProSyst is a OSGi implementation targeting embedded devices. Currently supported by Bosch Software Innovations.
+Gemini Blueprint is Eclipse's Community implementation for the OSGi Alliance. Gemini Blueprint makes it easy to build Java applications that run in an OSGi framework. Applications benefit from using a better separation of modules, the ability to dynamically add, remove, and update modules in a running system, the ability to deploy multiple versions of a module simultaneously and a dynamic service model.
 
 
-Implementation|Specification Version| Link
+### Concierge osgi
+Concierge OSGi is Eclipse's Community OSGi implementation for mobile and embedded devices. Concierge brings OSGi to popular devices such as the Raspberry Pi and Beaglebone black. Concierge also has support for running on Android's Dalvik VM. With a .jar size of around 250kb, Concierge is the smallest OSGi R5 implementation. This results in a fast startup time and an efficient service registry. Also, the framework runs on current and upcoming Java embedded profiles (e.g. Java 8 compact profile).
+
+
+
+Implementation|Specification Version|Link
 ---|--|---
 Apache Felix|1.7|http://felix.apache.org
 Eclipse Equinox|1.8|http://eclipse.org/equinox
 Knopflerfish|1.7|http://www.knopflerfish.org	
-ProSyst|1.5|http://www.prosyst.com	
+Gemini Blueprint|1.8|https://eclipse.org/gemini/blueprint/
+Concierge osgi|R5|http://www.eclipse.org/concierge/
 
 
 ## OSGi basics
@@ -212,7 +217,7 @@ There are some bundles that should be started early in the startup process, such
 
 >An OSGi service is a java object instance, registered into an OSGi framework with a set of properties. Any java object can be registered as a service, but typically it implements a well-known interface.
 
-The first step of the definition of an OSGi service is the declaration of the class or interface to the corresponding service. This is called the service interface. The second step is the creation of the implementation class for the service interface. OSGi provides a central service registry which allows developers to register services implementations and consume existing services via the OSGi runtime. A service can be dynamically started and stopped, and plug-ins which use services must be able to handle this dynamic behavior. The plug-ins can register listeners to be informed if a service is started or stopped. During the declaration of a service it is possible to specify key / values which can be used to configure the service. It is possible to define a [Start level](REF TBD) for a service via a service property. Services can "come and go" and applications using them will not break, can be replaced/updated in runtime without affecting their consumers Services, like everything else in OSGi, are versioned
+The first step of the definition of an OSGi service is the declaration of the class or interface to the corresponding service. This is called the service interface. The second step is the creation of the implementation class for the service interface. OSGi provides a central service registry which allows developers to register services implementations and consume existing services via the OSGi runtime. A service can be dynamically started and stopped, and plug-ins which use services must be able to handle this dynamic behavior. The plug-ins can register listeners to be informed if a service is started or stopped. During the declaration of a service it is possible to specify key / values which can be used to configure the service. It is possible to define a [Start level](/openwis-pilots-tutorial-2#start-levels) for a service via a service property. Services can "come and go" and applications using them will not break, can be replaced/updated in runtime without affecting their consumers Services, like everything else in OSGi, are versioned
 
 
 An OSGi Service is:
@@ -375,8 +380,8 @@ After the successful log in:
 ### Deploy a sample application
 While you will learn in the Karaf user’s guide how to fully use and leverage Apache Karaf, let’s install a sample application for now:
 
-  
-   Clone and build the [OWT2 code](https://github.com/dimipapadeas/OpenWIS-Pilots/tree/master/openwis-pilots-tutorial-2/OWT2).
+
+Clone and build the [OWT2 code](/openwis-pilots-tutorial-2/OWT2).
 
 Add bundle's repo:
 
