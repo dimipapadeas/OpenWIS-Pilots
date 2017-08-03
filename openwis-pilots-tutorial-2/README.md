@@ -1,6 +1,45 @@
 ## OWT-2: SOA Using OSGi and Apache Karaf
 
-[TOC]
+Table of Contents
+=================
+
+  * [Architecture: Monolithic vs Modular](#architecture-monolithic-vs-modular)
+    * [Monolithic Architecture Disadvantages](#monolithic-architecture-disadvantages)
+      * [Agility](#agility)
+      * [Scalability](#scalability)
+      * [DevOps Cycle](#devops-cycle)
+      * [Availability](#availability)
+      * [Performance](#performance)
+    * [Modular Architecture](#modular-architecture)
+  * [OSGi](#osgi)
+  * [OSGi Implementations](#osgi-implementations)
+    * [Apache Felix](#apache-felix)
+    * [Eclipse Equinox](#eclipse-equinox)
+    * [Knopflerfish](#knopflerfish)
+    * [Gemini Blueprint](#gemini-blueprint)
+    * [Concierge OSGi](#concierge-osgi)
+  * [OSGi Basics](#osgi-basics)
+    * [OSGi Conceptual Layers](#osgi-conceptual-layers)
+        * [Module Layer](#module-layer)
+        * [Lifecycle Layer](#lifecycle-layer)
+        * [Service Layer](#service-layer)
+    * [OSGi Bundles](#osgi-bundles)
+      * [Bundle Manifests](#bundle-manifests)
+    * [Bundle Life\-cycle](#bundle-life-cycle)
+    * [Start Levels](#start-levels)
+      * [High Priority Features](#high-priority-features)
+    * [OSGi Services](#osgi-services)
+    * [Registering Services Using Declarative Registration](#registering-services-using-declarative-registration)
+    * [Registering Services Using Annotations](#registering-services-using-annotations)
+* [OSGi Karaf](#osgi-karaf)
+    * [Karaf Features](#karaf-features)
+    * [Karaf Enterprise Features](#karaf-enterprise-features)
+    * [Karaf Shell](#karaf-shell)
+    * [Karaf Installation](#karaf-installation)
+    * [Karaf Web Console](#karaf-web-console)
+  * [Deploying Bundles on Karaf](#deploying-bundles-on-karaf)
+    * [Deploy a Sample Application](#deploy-a-sample-application)
+    * [Bundle ID](#bundle-id)
 
 
 ## Architecture: Monolithic vs Modular
