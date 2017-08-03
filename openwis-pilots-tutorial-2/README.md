@@ -52,13 +52,10 @@ The OSGi Specifications can be obtained from [here](http://www.osgi.org/Specific
 
 ## OSGi implementations
 
-`Apache Felix, Eclipse Equinox, Knopflerfish, ProSyst.`
-
 The OSGi standards are defined in the OSGi Alliance and published in OSGi specification documents such as the Core and Compendium specifications. These specifications contain chapters each of which describe a specific OSGi standard. This page contains most popular implementations of OSGi standards, both commercial and open source implementations are included.
 Implementations realize specification chapter(s) from the OSGi specification documents.
 
 `image pending`
-
 
 
 
@@ -145,10 +142,14 @@ A OSGi Bundle is
  bundle.
 
  A simple Manifest:
-![A simple Manifest](wiki_img/simpleManifest.png)
+ 
+ 
+ ![A simple Manifest](wiki_img/simpleManifest.png)
 
 
 A more complex Manifest:
+
+
 ![A more complex one](wiki_img/aMoreComplexManifest.png)
 
 
@@ -166,8 +167,6 @@ Most IDEs provide auto generation mechanisms for manifests but also convenient e
 
 OSGi is a dynamic platform. This means that bundles may be installed, started, updated, stopped, and uninstalled at any time during the running of the framework.
 
-![](wiki_img/OWT-2_1.png)
-
 
 OSGi Bundle Status|Description
 ----|----------
@@ -177,6 +176,9 @@ STARTING|A temporary state that the bundle goes through while the bundle is star
 ACTIVE|The bundle is running.
 STOPPING|A temporary state that the bundle goes through while the bundle is stopping.
 UNINSTALLED|The bundle has been removed from the OSGi container.
+
+
+![](wiki_img/OWT-2_1.png)
 
 
 
@@ -390,29 +392,6 @@ Install bundle
     bundle:install -s mvn:com.owt2.demo/bundle-101/1.0.0-SNAPSHOT
 
 
-```
-        __ __                  ____
-       / //_/____ __________ _/ __/
-      / ,<  / __ `/ ___/ __ `/ /_
-     / /| |/ /_/ / /  / /_/ / __/
-    /_/ |_|\__,_/_/   \__,_/_/
-
-  Apache Karaf (4.1.1)
-
-Hit '<tab>' for a list of available commands
-and '[cmd] --help' for help on a specific command.
-Hit '<ctrl-d>' or type 'system:shutdown' or 'logout' to shutdown Karaf.
-
-karaf@root()> feature:repo-add mvn:com.owt2.demo/features/1.0.0-SNAPSHOT/xml/features
-Adding feature url mvn:com.owt2.demo/features/1.0.0-SNAPSHOT/xml/features
-karaf@root()> install -s wrap:mvn:javax.inject/javax.inject/1
-Bundle ID: 52
-karaf@root()> bundle:install -s mvn:com.owt2.demo/bundle-101/1.0.0-SNAPSHOT
-A new Bundle has started!
-Bundle ID: 53
-karaf@root()>
-
-```
 ![](wiki_img/aNewBundler.png)
 
 
