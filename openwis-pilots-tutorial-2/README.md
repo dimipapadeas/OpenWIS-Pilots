@@ -172,7 +172,7 @@ UNINSTALLED|The bundle has been removed from the OSGi container.
 
 
 
-## Start levels
+### Start levels
 
 Start level is a priority number that is assigned to bundles. The framework itself also has a certain start level, and only bundles with a start level lower than or equal to that of the framework will actually be active. Bundles with a start level higher than that of the framework will not be active. You can however tell such a bundle to become active as soon as the framework reaches this start level. That’s usually described as “persistently started”. When the framework starts up, it will go through the start levels one by one until it reaches the target start level. That means that by assigning start levels to bundles, you can determine their startup order. By the way, if multiple bundles share the same start level, there is no guarantee in what order they will start, neither the order they will finish.
 
@@ -190,16 +190,16 @@ There are a couple of testing modes for start levels:
 A higher start level than normal that will active extra bundles that add monitoring or debugging functionality. The start level, as always, will be set by the management agent whenever something goes wrong that needs further analysis.
 
 - Power save mode
-For embedded applications, a special power save start level could disable all bundles that are not necessary in that mode. F
+For embedded applications, a special power save start level could disable all bundles that are not necessary in that mode.
 
 
-High priority features
+#### High priority features
 
 There are some bundles that should be started early in the startup process, such as a logging service, or a splash screen. That is accomplished by setting such bundles a low start level.
 
 
 
-## OSGi Services
+### OSGi Services
 
 >An OSGi service is a java object instance, registered into an OSGi framework with a set of properties. Any java object can be registered as a service, but typically it implements a well-known interface.
 
@@ -323,8 +323,6 @@ To exit Apache Karaf console:
 
     Ctrl + D
 
-
-
 Karaf Web Console
 
 Apache Karaf provides an optional WebConsole.
@@ -354,7 +352,7 @@ Navigate to [default webconsole page](http://localhost:8181/system/console/bundl
 Authentication required , the Default user name /password is :
        karaf / karaf
 
-Optionally it can be modified : at
+Optionally it can be modified  at:
 {KARAF_HOME}\etc\users.properties
 
 http://localhost:8181/system/console/bundles
@@ -382,12 +380,16 @@ Add bundle's repo:
 
 Install prerequisites:
 
-install -s wrap:mvn:javax.inject/javax.inject/1
+
+     install -s wrap:mvn:javax.inject/javax.inject/1
+
 
 Install bundle
-bundle:install -s mvn:com.owt2.demo/bundle-101/1.0.0-SNAPSHOT
+
+    bundle:install -s mvn:com.owt2.demo/bundle-101/1.0.0-SNAPSHOT
 
 
+```
         __ __                  ____
        / //_/____ __________ _/ __/
       / ,<  / __ `/ ___/ __ `/ /_
@@ -409,6 +411,7 @@ A new Bundle has started!
 Bundle ID: 53
 karaf@root()>
 
+```
 ![](wiki_img/aNewBundler.png)
 
 
