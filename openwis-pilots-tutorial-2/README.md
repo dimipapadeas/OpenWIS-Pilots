@@ -395,4 +395,21 @@ Install bundle
 ![](wiki_img/aNewBundler.png)
 
 
+### Bundle ID
+
+After installation installation Karaf assigns a Bundle ID to each Bundle:
+    
+    Bundle ID: 53
+
+Bundle ID can be used as a reference to the specified Bundle ex:
+
+    update 53
+
+
+All available Bunldes are listed with `list` command:
+
+
+![](wiki_img/aNewBundler.png)
+
+
 
