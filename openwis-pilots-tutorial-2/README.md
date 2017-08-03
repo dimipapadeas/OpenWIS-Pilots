@@ -1,19 +1,6 @@
 ## OWT-2: SOA using OSGi and Apache Karaf
-OSGi (Open Service Gateway Initiative) is a Java framework for developing and deploying modular software programs and libraries. Each bundle is a tightly coupled, dynamically loadable collection of classes, jars, and configuration files that explicitly declare their external dependencies (if any).
-
-Apache Karaf is a small OSGi based runtime that provides a lightweight container onto which various components and applications can be deployed.
-
-This tutorial will cover the following topics:
-1. OSGi basics: Bundles & Services.
-2. OSGi implementations: Apache Felix, Eclipse Equinox, Knopflerfish, ProSyst.
-2. OSGi Karaf features.
-4. Deploying bundles on Karaf.
-
-____
 
 [TOC]
-`pending`
-![](wiki_img/.png)
 
 
 ## Introduction - from monolithic to modular
@@ -21,13 +8,13 @@ ____
 
 ## Monolithic architecture
 
-In software engineering, a monolithic architecture has been used to describe a single-tiered application in which all MVC components are combined into a single program within a single platform. A monolithic application is self-contained, and independent from other applications. 
+In software engineering, a monolithic architecture has been used to describe a single-tiered application in which all MVC components are combined into a single program within a single platform. A monolithic application is self-contained, and independent from other applications.
 Monolithic application can be considered as a big container where in all components of the application are assembled together and tightly packaged in various formats such as EAR, WAR, JAR etc. Which is finally deployed as a single unit on the application server.
 
 
-### Monolithic architectures drowback
+### Monolithic architectures drawback
 
-Monolithic services tend to get tightly coupled and entangled as the application evolves, making it difficult to isolate services for purposes such as independency scaling or mainainance. Monolithic architectures are also much harder to understand, because there may be dependencies, side-effects etc which are not obvious when you’re looking at a particular service or controller.
+Monolithic services tend to get tightly coupled and entangled as the application evolves, making it difficult to isolate services for purposes such as independency scaling or maintenance. Monolithic architectures are also much harder to understand, because there may be dependencies, side-effects etc which are not obvious when you’re looking at a particular service or controller.
 
 Aspects where monolithic architectures are not doing well:
 
@@ -51,8 +38,8 @@ Fault Tolerance When a specific service is under heavy pressure it brings the wh
 
 
 
-The answer to [Monolithic architectures drowback ](path), is not to rip and replace systems or applications, nor to completely renovate them, but rather to find a way to leverage existing software investments so that overall organizational goals are effectively supported. That soloution is to eliminate dependencies and enable quick testing and deployment of code changes, greater modularity, loose coupling and all hold promise in simplifying the integration task. In other words modular Architecture. Modular orientation helps to accomplish these goals by making systems more responsive to business needs, simpler to develop and easier to maintain and manage. Implementing a solution architecture based upon modularity helps organizations plan ahead for change, rather than responding reactively.
-  
+The answer to [Monolithic architectures drawback ](path), is not to rip and replace systems or applications, nor to completely renovate them, but rather to find a way to leverage existing software investments so that overall organizational goals are effectively supported. That solution is to eliminate dependencies and enable quick testing and deployment of code changes, greater modularity, loose coupling and all hold promise in simplifying the integration task. In other words modular Architecture. Modular orientation helps to accomplish these goals by making systems more responsive to business needs, simpler to develop and easier to maintain and manage. Implementing a solution architecture based upon modularity helps organizations plan ahead for change, rather than responding reactively.
+ 
 
 ## OSGi
 
@@ -68,10 +55,10 @@ The OSGi Specifications can be obtained from [here](http://www.osgi.org/Specific
 
 `Apache Felix, Eclipse Equinox, Knopflerfish, ProSyst.`
 
-The OSGi standards are defined in the OSGi Alliance and published in OSGi specification documents such as the Core and Compendium specifications. These specifications contain chapters each of which describe a specific OSGi standard. This page contains most popular implementations of OSGi standards, both commercial and open source implementations are included. 
+The OSGi standards are defined in the OSGi Alliance and published in OSGi specification documents such as the Core and Compendium specifications. These specifications contain chapters each of which describe a specific OSGi standard. This page contains most popular implementations of OSGi standards, both commercial and open source implementations are included.
 Implementations realize specification chapter(s) from the OSGi specification documents.
 
-[image ok ]
+`image pending`
 
 ### Apache Felix
 
@@ -89,21 +76,21 @@ Implementations realize specification chapter(s) from the OSGi specification doc
 Equinox began as a project to replace the original Eclipse plug-in runtime in version 3.0 of Eclipse (c. 2004). The open source project was seeded with code donated by IBM's Service Management Framework (SMF) product. It was further developed to meet the needs of the Eclipse community. The adaptations were made into the OSGi specification process, with many being incorporated in the R4 release of the OSGi framework specification. Since then, Equinox has been the reference implementation for the OSGi framework specification.
 
 
-### Knopflerfish 
+### Knopflerfish
 http://www.knopflerfish.org
 
 
-Knopflerfish  OSGi Framework  (open source and enteprise editiotns )
+Knopflerfish  OSGi Framework  (open source and enterprise editions )
 
-The Knopflerfish R6 OSGi framework and related Services is implemented in accordance with the OSGi R6 specification. The numbering for the OSGi defined components refer to the OSGi specification chapter numbering. Version refer the version of the particalar specification in the OSGi Core Specification
+The Knopflerfish R6 OSGi framework and related Services is implemented in accordance with the OSGi R6 specification. The numbering for the OSGi defined components refer to the OSGi specification chapter numbering. Version refer the version of the particular specification in the OSGi Core Specification
 
 Knopflerfish Pro is Makewave’s certified release 4, version 4.2 compliant OSGi service platform, based directly on the open source Knopflerfish OSGi distribution. Knopflerfish Pro is a fully supported product, intended for professional use, and gives companies the assurance required to use open source software in commercial systems. Knopflerfish Pro extends open source Knopflerfish by adding a set of bundles only available in the Pro version, making Knopflerfish Pro a complete implementation of the OSGi Release 4, version 4.2 specifications. This includes the OSGi defined UPnP services as well as the residential and mobile management services, e.g. DMT Admin.
 
 
 
-### ProSyst 
+### ProSyst
 
-ProSyst is a OSGi implementation targeting embeded divices. Currently supported by Bosch Software Innovations.
+ProSyst is a OSGi implementation targeting embedded devices. Currently supported by Bosch Software Innovations.
 
 
 
@@ -121,7 +108,7 @@ OSGi framework architecture consists three conceptual layers. Each layer is depe
 
 ##### Module layer
 
-Module layer defines OSGi module concept - bundle, which is a JAR file with extra metadata. A bundle contains class files and related resources such as images, xml files. Through [manifest.mf metadata file](pathTBD pio katw sto keimeno), Module layer declare which contained packages in JAR file are visible to outside, and declare on which external packages the bundle depend.
+Module layer defines OSGi module concept - bundle, which is a JAR file with extra metadata. A bundle contains class files and related resources such as images, xml files. Through [manifest.mf metadata file](path TBD ), Module layer declare which contained packages in JAR file are visible to outside, and declare on which external packages the bundle depend.
 
 
 ##### Lifecycle layer
@@ -133,18 +120,18 @@ This layer defines how bundles are dynamically installed and managed in the OSGi
 In this layer, service providers publish services to service registry, while service clients search the registry to find available services to use. This is like a service-oriented architecture (SOA) which has been largely used in web services. Here OSGi services are local to a single VM, so it is sometimes called SOA in a VM.
 
 
-### OSGi Bundles 
+### OSGi Bundles
 
 >A OSGi Bundle is a group of Java classes and additional resources equipped with a detailed manifest MANIFEST.MF file on all its contents, as well as additional services needed to give the included group of Java classes more sophisticated behaviors, to the extent of deeming the entire aggregate a component.
 
-The OSGi spec describes the OSGi Bundle as a **unit of modularization** that is comprised of Java classes and other resources which together can provide functions to end users. 
+The OSGi spec describes the OSGi Bundle as a **unit of modularization** that is comprised of Java classes and other resources which together can provide functions to end users.
 
  A OSGi Bundle is a JAR file that contains a manifest file describing the contents of the JAR file and providing information about the bundle. Can contain optional documentation in the OSGI-OPT directory of the JAR file or one of its sub-directories. In short, a bundle = jar + OSGI information (specified in the JAR manifest file - META-INF/MANIFEST.MF), no extra files or predefined folder layout are required. This means that all it takes to create a bundle from a jar, is to add some entries to the JAR manifest.
 
 A OSGi Bundle is
 - The standard deployment unit of OSGi
-- Versioned 
-- Declarative dependencies speciﬁcation 
+- Versioned
+- Declarative dependencies specification
 
 
 #### Bundle Manifests
@@ -153,22 +140,21 @@ A OSGi Bundle is
  bundle.
 
  
-[image of a simple manfiest... ]
 ![A simple Manifest](wiki_img/simpleManifest.png)
 
 
-[image of not simple manfiest... ]
+
 ![A more complex one](wiki_img/aMoreComplexManifest.png)
 
 
-OSGi Bundles may deﬁne 
+OSGi Bundles may define
 - Libraries / SDKs
 - REST endpoints
 - Web Applications
 - Services
 - Extensions for other bundles
 
-Most IDEs provide auto generation mechanisms for manifests but also convenient editors where developer may edit the manifest file. 
+Most IDEs provide auto generation mechanisms for manifests but also convenient editors where developer may edit the manifest file.
 
 
 ### Bundle life-cycle
@@ -186,16 +172,16 @@ UNINSTALLED|The bundle has been removed from the OSGi container.
 
 
 
-## Start levels 
+## Start levels
 
-Start level is a priority number that is assigned to bundles. The framework itself also has a certain start level, and only bundles with a start level lower than or equal to that of the framework will actually be active. Bundles with a start level higher than that of the framework will not be active. You can however tell such a bundle to become active as soon as the framework reaches this start level. That’s usually described as “persistently started”. When the framework starts up, it will go through the start levels one by one until it reaches the target start level. That means that by assigning start levels to bundles, you can determine their startup order. By the way, if multiple bundles share the same start level, there is no guarantee in what order they will start, neither the order thery will finish. 
+Start level is a priority number that is assigned to bundles. The framework itself also has a certain start level, and only bundles with a start level lower than or equal to that of the framework will actually be active. Bundles with a start level higher than that of the framework will not be active. You can however tell such a bundle to become active as soon as the framework reaches this start level. That’s usually described as “persistently started”. When the framework starts up, it will go through the start levels one by one until it reaches the target start level. That means that by assigning start levels to bundles, you can determine their startup order. By the way, if multiple bundles share the same start level, there is no guarantee in what order they will start, neither the order they will finish.
 
 
 There are however two things to keep in mind:
 
 - The start level service is optional and when it’s not present there is no control over the startup order.
-- There must be no depedency on the presence of a service that was published by a bundle with a lower start level, since Services are dynamic.
-- when a bundle is updated, its services are ``resolved`` for a short while. 
+- There must be no dependency on the presence of a service that was published by a bundle with a lower start level, since Services are dynamic.
+- when a bundle is updated, its services are ``resolved`` for a short while.
 
 
 There are a couple of testing modes for start levels:
@@ -213,29 +199,29 @@ There are some bundles that should be started early in the startup process, such
 
 
 
-## OSGi Services 
+## OSGi Services
 
 >An OSGi service is a java object instance, registered into an OSGi framework with a set of properties. Any java object can be registered as a service, but typically it implements a well-known interface.
 
-The first step of the definition of an OSGi service is the declaration of the class or interface to the corresponding service. This is called the service interface. The second step is the creation of the implementation class for the service interface. OSGi provides a central service registry which allows developers to register services implementations and consume existing services via the OSGi runtime. A service can be dynamically started and stopped, and plug-ins which use services must be able to handle this dynamic behavior. The plug-ins can register listeners to be informed if a service is started or stopped. During the declaration of a service it is possible to specify key / values which can be used to configure the service. It is possible to define a [Start level](REFFFFFFFFFF) for a service via a service property. Services can "come and go" and applications using them will not break, can be replaced/updated in runtime without affecting their consumers Services, like everything else in OSGi, are versioned
+The first step of the definition of an OSGi service is the declaration of the class or interface to the corresponding service. This is called the service interface. The second step is the creation of the implementation class for the service interface. OSGi provides a central service registry which allows developers to register services implementations and consume existing services via the OSGi runtime. A service can be dynamically started and stopped, and plug-ins which use services must be able to handle this dynamic behavior. The plug-ins can register listeners to be informed if a service is started or stopped. During the declaration of a service it is possible to specify key / values which can be used to configure the service. It is possible to define a [Start level](REF TBD) for a service via a service property. Services can "come and go" and applications using them will not break, can be replaced/updated in runtime without affecting their consumers Services, like everything else in OSGi, are versioned
 
 
 An OSGi Service is:
-- A contract and one (ore more) implementations of that contract. 
-- Real-time appearance, disappearance, replacement. 
-- Dynamic binding 
-- apps don't break if a service is not available. 
+- A contract and one (ore more) implementations of that contract.
+- Real-time appearance, disappearance, replacement.
+- Dynamic binding
+- apps don't break if a service is not available.
 - LDAP-like querying capabilities
-- Implement the SOA paradigm 
+- Implement the SOA paradigm
 - Publish-Find-Subscribe pattern
 - Service Registry is kept by OSGi
-- Clients perform lookup in the registry 
-- Promotes interface-driven development 
+- Clients perform lookup in the registry
+- Promotes interface-driven development
 - A contract between Producer and Consumer
 
-  
+ 
 
-### Registering services using declarative registration 
+### Registering services using declarative registration
 
 For declarative registration  quite a few frameworks/tools available the most popular are DS, iPOJO, Blueprint. There is no clear answer which one is better. In this document we will demonstrate Blueprint.
 
@@ -262,7 +248,7 @@ import javax.inject.Singleton;
 @Singleton
 @OsgiServiceProvider(classes = {AService.class})
 public class AServiceImpl implements AService {
-...    
+...   
 ```
 
 
@@ -282,8 +268,8 @@ Apache Karaf uses either the Apache Felix or Eclipse Equinox OSGi frameworks, pr
 Apache Karaf can be scaled from a very lightweight container to a fully featured enterprise service: it’s a very flexible and extensible container, covering all the major needs.
 
 
-### Karaf features 
-Apache Karaf provides a simple and flexible way to provision applications. In Apache Karaf, the application provisioning is an Apache Karaf feature. When a feature is beind installed, Apache Karaf installs all resources described in the feature. It means that it will automatically resolves and installs all bundles, configurations, and dependency features described in the feature.
+### Karaf features
+Apache Karaf provides a simple and flexible way to provision applications. In Apache Karaf, the application provisioning is an Apache Karaf feature. When a feature is being installed, Apache Karaf installs all resources described in the feature. It means that it will automatically resolves and installs all bundles, configurations, and dependency features described in the feature.
 
 A feature describes an application as:
 - a name
@@ -294,18 +280,18 @@ A feature describes an application as:
 - optionally a set of dependency features
 
 
-### Karaf Enterprise features 
-  Karaf as is delivered, already, has more features than the vanilla osgi enviroment. In addition to those there are more out of the box:
-    
+### Karaf Enterprise features
+  Karaf as is delivered, already, has more features than the vanilla osgi environment. In addition to those there are more out of the box:
+   
 
 ![](wiki_img/KarafEnterpriseFeatures.png)
 
 
-Karaf shell 
-- Text-based administration console 
-- Default interface when Karaf boots up 
-- Useful to debug and view logs 
-- You can connect to a background-running, local Karaf via ./bin/client. • 
+Karaf shell
+- Text-based administration console
+- Default interface when Karaf boots up
+- Useful to debug and view logs
+- You can connect to a background-running, local Karaf via ./bin/client. •
 
 
 ### Karaf installation
@@ -314,10 +300,10 @@ Karaf shell
 
 from http://karaf.apache.org/download.html
 download the Binary Distribution zip
-select a folder and extract it:... .. 
-that extracted folder will be the karaf home 
+select a folder and extract it, that folder will be the Karaf-home
 
-then open a cmd client and navigate to the karaf extraction \bin  path and execute:
+Then open a cmd client and navigate to the {karaf home}\bin  path and execute:
+
 D:\apache-karaf-4.1.1\bin
 
 and run karaf.bat
@@ -325,13 +311,15 @@ and run karaf.bat
 ![](wiki_img/voila-Karaf.png)
 
 
-to acces karaf log: + logger
+To acces Karaf logger
 
-from the home  folder :
+from the Karaf home  folder :
 tail -F data\log\karaf.log
-[image]
 
-To exit apache karaf console:
+![](wiki_img/karaf.log.png
+
+
+To exit Apache Karaf console:
 
     Ctrl + D
 
@@ -347,12 +335,12 @@ You can use the WebConsole to:
 - manage Apache Karaf features
 - manage OSGi bundles
 - manage the instances
-- manage the confgurations
+- manage the configurations
 - manage the log service
 
 
-Istallation
-To enable the Apache Karaf WebConsole, you just have to install the webconsole feature:
+Installation of WebConsole
+To enable the Apache Karaf WebConsole, you just have to install the `webconsole feature`:
 
 ```
 karaf@root()> feature:install webconsole
@@ -361,17 +349,17 @@ karaf@root()> feature:install webconsole
 
 ![](wiki_img/KarafConsole.png)
 
+Navigate to [default webconsole page](http://localhost:8181/system/console/bundles)
 
-authentication required : the default user name pasword is :
-karaf 
-karaf 
+Authentication required , the Default user name /password is :
+       karaf / karaf
 
 Optionally it can be modified : at
 {KARAF_HOME}\etc\users.properties
 
 http://localhost:8181/system/console/bundles
 
-After the successfull log in :
+After the successful log in :
 
 ![Apache Karaf Web Console Bundles](wiki_img/ApacheKarafWebConsoleBundles.png)
 
@@ -381,37 +369,22 @@ After the successfull log in :
 
 
 ## Deploying bundles on Karaf
- kind of manual
- 
-Shell commands
 
-+ basic commands
-+ add / start / stop / remove a dummy bunldle?? or web console..
+### Deploy a sample application
+While you will learn in the Karaf user’s guide how to fully use and leverage Apache Karaf, let’s install a sample application for now:
 
+Clone and build the OWT2 code.
 
+Add bundle's repo:
 
-Deploy a sample application
-While you will learn in the Karaf user’s guide how to fully use and leverage Apache Karaf, let’s install a sample Apache Camel application for now:
+    feature:repo-add mvn:com.owt2.demo/features/1.0.0-SNAPSHOT/xml/features
+   
 
-In the console, run the following commands:
+Install prerequisites:
 
-
-// mhpws to kanoume me featuure reapo add.. ktl..
-1) Create an empty apllication 
-2) edit pom
-3) create java class
-4) build..
-
-
-
-
-`REPO ADD`
-feature:repo-add mvn:com.owt2.demo/features/1.0.0-SNAPSHOT/xml/features 
-
-//we installl required bundle..
 install -s wrap:mvn:javax.inject/javax.inject/1
 
-`installation cmd`
+Install bundle
 bundle:install -s mvn:com.owt2.demo/bundle-101/1.0.0-SNAPSHOT
 
 
@@ -437,5 +410,6 @@ Bundle ID: 53
 karaf@root()>
 
 ![](wiki_img/aNewBundler.png)
+
 
 
